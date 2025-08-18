@@ -19,6 +19,8 @@ abstract class AbstractGateway extends AbstractGatewayBase
             'apiKey' => null,
             'accessToken' => null,
             'testMode' => false,
+            'customisationTemplateId' => null,
+            'configurationTemplateId' => null,
         ];
     }
 }

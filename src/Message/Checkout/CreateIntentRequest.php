@@ -39,17 +39,14 @@ class CreateIntentRequest extends AbstractCheckoutRequest
                 ],
             ],
             'amount' => (float) $this->getAmount(),
-            'version' => 1, // TODO: Allow this to be configurable.
+            'version' => 1, // TODO: Consider allowing this to be configurable.
             'currency' => $this->getCurrency(),
             'reference' => $this->getTransactionId(),
         ];
 
-        if (!$data['customer']['phone']) {
-            unset($data['customer']['phone']);
-        }
-        if (!$data['customer']['billing_address']['address_line2']) {
-            unset($data['customer']['billing_address']['address_line2']);
-        }
+        // Remove any empty values from the customer details.
+        $data['customer']['billing_address'] = array_filter($data['customer']['billing_address']);
+        $data['customer'] = array_filter($data['customer']);
 
         return $data;
     }

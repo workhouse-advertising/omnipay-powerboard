@@ -9,7 +9,23 @@ trait GatewayParameters
      */
     public function getBaseAssetUrl()
     {
-        return $this->getBaseEndpoint();
+        return $this->getTestMode() ? $this->getTestBaseAssetUrl() : $this->getLiveBaseAssetUrl();
+    }
+
+    /**
+     * @return string
+     */
+    public function getLiveBaseAssetUrl()
+    {
+        return 'https://widget.powerboard.commbank.com.au';
+    }
+
+    /**
+     * @return string
+     */
+    public function getTestBaseAssetUrl()
+    {
+        return 'https://widget.preproduction.powerboard.commbank.com.au';
     }
 
     /**
