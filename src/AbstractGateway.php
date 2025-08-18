@@ -1,0 +1,24 @@
+<?php
+
+namespace Omnipay\Powerboard;
+
+use Omnipay\Common\AbstractGateway as AbstractGatewayBase;
+use Omnipay\Powerboard\Traits\GatewayParameters;
+
+abstract class AbstractGateway extends AbstractGatewayBase
+{
+    use GatewayParameters;
+
+    /**
+     * @return array
+     */
+    public function getDefaultParameters()
+    {
+        return [
+            // NOTE: Either an API key or an access token can be provided.
+            'apiKey' => null,
+            'accessToken' => null,
+            'testMode' => false,
+        ];
+    }
+}

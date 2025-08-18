@@ -1,0 +1,39 @@
+{
+    "name": "workhouse-advertising/omnipay-powerboard",
+    "description": "CBA Powerboard gateway for Omnipay payment processing library",
+    "keywords": [
+        "cba",
+        "omnipay",
+        "powerboard",
+        "gateway",
+        "merchant"
+    ],
+    "homepage": "https://github.com/workhouse-advertising/omnipay-powerboard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Geoghegan",
+            "email": "simon@workhouseadvertising.com.au"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Powerboard\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnipay\\Powerboard\\Test\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.2|^8.0",
+        "omnipay/common": "^3.1"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3|^4"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
