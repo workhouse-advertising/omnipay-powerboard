@@ -4,14 +4,14 @@ namespace Omnipay\Powerboard\Message\Checkout;
 
 use Omnipay\Powerboard\Message\AbstractResponse;
 
-class CreateIntentResponse extends AbstractResponse
+class GetIntentResponse extends AbstractResponse
 {
     /**
      * @inheritDoc
      */
     public function isSuccessful()
     {
-        return ($this->getData()['status'] ?? null) == 201;
+        return ($this->getData()['status'] ?? null) == 200;
     }
 
     /**

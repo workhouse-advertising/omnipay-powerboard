@@ -9,5 +9,11 @@ use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 abstract class AbstractResponse extends BaseAbstractResponse implements RedirectResponseInterface
 {
-    //
+    /**
+     * @return mixed
+     */
+    public function getErrorSummary()
+    {
+        return $this->getData()['error_summary'] ?? null;
+    }
 }

@@ -69,4 +69,38 @@ trait GatewayParameters
     {
         return $this->setParameter('accessToken', $value);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCustomisationTemplateId()
+    {
+        return $this->getParameter('customisationTemplateId');
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function setCustomisationTemplateId($value)
+    {
+        return $this->setParameter('customisationTemplateId', $value);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getConfigurationTemplateId()
+    {
+        return $this->getParameter('configurationTemplateId');
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function setConfigurationTemplateId($value)
+    {
+        return $this->setParameter('configurationTemplateId', $value);
+    }
 }

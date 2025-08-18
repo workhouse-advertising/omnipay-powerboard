@@ -15,7 +15,7 @@ class CheckoutGateway extends AbstractGateway
     }
 
     /**
-     * Fetch a checkout intent.
+     * Create a checkout intent.
      *
      * @param array $options
      * @return \Omnipay\Common\Message\AbstractRequest
@@ -23,6 +23,17 @@ class CheckoutGateway extends AbstractGateway
     public function createIntent(array $options = [])
     {
         return $this->createRequest(\Omnipay\Powerboard\Message\Checkout\CreateIntentRequest::class, $options);
+    }
+
+    /**
+     * Get a checkout intent.
+     *
+     * @param array $options
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function getIntent(array $options = [])
+    {
+        return $this->createRequest(\Omnipay\Powerboard\Message\Checkout\GetIntentRequest::class, $options);
     }
 
     /**
