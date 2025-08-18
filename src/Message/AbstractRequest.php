@@ -64,10 +64,9 @@ abstract class AbstractRequest extends BaseAbstractRequest
      */
     public function sendData($data)
     {
-        $headers = [
-            'Authorization' => "Basic {$this->getAuthorisationBasicPassword()}",
+        $headers = array_merge($this->getAuthenticationHeaders(), [
             'Content-Type' => 'application/json',
-        ];
+        ]);
 
         $requestBody = ($this->getMethod() == 'GET') ? null : json_encode($data);
         $requestParams = ($this->getMethod() == 'GET') ? '?' . http_build_query($data) : '';

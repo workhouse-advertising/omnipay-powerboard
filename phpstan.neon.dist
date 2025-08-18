@@ -1,0 +1,16 @@
+includes:
+    - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+
+parameters:
+    # level: 8
+    # level: max
+    level: 5
+    paths:
+        - src
+    # excludePaths:
+    #     - ./src/SomePath/*/tests/*
+    # ignoreErrors:
+    #     - "#Some error#"
+    reportUnmatchedIgnoredErrors: false
+    # checkMissingIterableValueType: false
+    # checkModelProperties: true

@@ -31,9 +31,20 @@
         "omnipay/common": "^3.1"
     },
     "require-dev": {
-        "omnipay/tests": "^3|^4"
+        "omnipay/tests": "^3|^4",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0"
     },
     "scripts": {
-        "test": "phpunit"
+        "test:static": "./vendor/bin/phpstan analyse --ansi --memory-limit=-1",
+        "test": [
+            "@test:static",
+            "phpunit"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     }
 }
