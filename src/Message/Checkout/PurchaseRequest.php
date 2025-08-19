@@ -27,8 +27,7 @@ class PurchaseRequest extends AbstractCheckoutRequest
      */
     public function getEndpoint(): string
     {
-        // TODO: Update this so that it works.
-        return sprintf('%s/v1/checkouts/intent/%s', $this->getBaseEndpoint(), $this->getIntentId());
+        return sprintf('%s/v1/checkouts/%s', $this->getBaseEndpoint(), $this->getIntentId());
     }
 
     /**

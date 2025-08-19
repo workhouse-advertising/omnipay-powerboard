@@ -11,7 +11,22 @@ class PurchaseResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
-        // TODO: Update this so that it works.
-        return false;
+        return ($this->getIntent()['status'] ?? null) == 'completed';
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIntent()
+    {
+        return $this->getData()['resource']['data'] ?? null;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIntentId()
+    {
+        return $this->getIntent()['_id'] ?? null;
     }
 }

@@ -2,17 +2,9 @@
 
 namespace Omnipay\Powerboard\Message\Checkout;
 
-use Omnipay\Common\Message\RedirectResponseInterface;
-use Omnipay\Powerboard\Message\AbstractResponse;
+use Omnipay\Powerboard\Message\Checkout\PurchaseResponse;
 
-class CompletePurchaseResponse extends AbstractResponse
+class CompletePurchaseResponse extends PurchaseResponse
 {
-    /**
-     * @inheritDoc
-     */
-    public function isSuccessful()
-    {
-        // TODO: Update this so that it works.
-        return false;
-    }
+    //
 }

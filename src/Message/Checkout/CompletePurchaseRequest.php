@@ -2,41 +2,10 @@
 
 namespace Omnipay\Powerboard\Message\Checkout;
 
-use Omnipay\Powerboard\Message\Checkout\AbstractCheckoutRequest;
+use Omnipay\Powerboard\Message\Checkout\PurchaseRequest;
 
-class CompletePurchaseRequest extends AbstractCheckoutRequest
+class CompletePurchaseRequest extends PurchaseRequest
 {
-    /**
-     * @inheritDoc
-     */
-    public function getData()
-    {
-        $this->validate(
-            'amount',
-            'currency',
-            'intentId',
-        );
-
-        return [];
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getEndpoint(): string
-    {
-        // TODO: Update this so that it works.
-        return sprintf('%s/v1/checkouts/intent/%s', $this->getBaseEndpoint(), $this->getIntentId());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getMethod(): string
-    {
-        return 'GET';
-    }
-
     /**
      * @inheritDoc
      */
