@@ -28,6 +28,32 @@ class CardGateway extends AbstractGateway
     }
 
     /**
+     * Initiate 3DS authentication.
+     *
+     * @param array $options
+     * @return \Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest
+     */
+    public function initiateAuthentication(array $options = [])
+    {
+        $request = $this->createRequest(\Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest::class, $options);
+        /** @var \Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest $request */
+        return $request;
+    }
+
+    /**
+     * Handle 3DS authentication.
+     *
+     * @param array $options
+     * @return \Omnipay\Powerboard\Message\Card\AuthenticateRequest
+     */
+    public function authenticate(array $options = [])
+    {
+        $request = $this->createRequest(\Omnipay\Powerboard\Message\Card\AuthenticateRequest::class, $options);
+        /** @var \Omnipay\Powerboard\Message\Card\AuthenticateRequest $request */
+        return $request;
+    }
+
+    /**
      * Authorize and immediately capture an amount on the customers card
      *
      * @param array $options

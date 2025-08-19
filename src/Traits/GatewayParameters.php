@@ -31,6 +31,15 @@ trait GatewayParameters
     /**
      * @return string
      */
+    public function getSdkJsUrl()
+    {
+        // TODO: Update this to use a specific versioned version of the JS.
+        return sprintf('%s/sdk/latest/widget.umd.js', $this->getBaseAssetUrl());
+    }
+
+    /**
+     * @return string
+     */
     public function getBaseEndpoint()
     {
         return $this->getTestMode() ? $this->getTestBaseEndpoint() : $this->getLiveBaseEndpoint();
