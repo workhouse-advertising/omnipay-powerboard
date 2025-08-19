@@ -32,6 +32,14 @@ class AuthenticateResponse extends AbstractResponse
     }
 
     /**
+     * @return mixed
+     */
+    public function getReturnUrl()
+    {
+        return $this->getData()['returnUrl'] ?? null;
+    }
+
+    /**
      * @inheritDoc
      */
     public function isRedirect()
@@ -50,8 +58,17 @@ class AuthenticateResponse extends AbstractResponse
     /**
      * @inheritDoc
      */
+    public function getRedirectUrl()
+    {
+        return $this->getReturnUrl();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getRedirectHtml()
     {
+        // TODO: Add JS error handling to this.
         return '<!DOCTYPE html>
 <html>
 <head>
@@ -64,11 +81,22 @@ class AuthenticateResponse extends AbstractResponse
     <script>
         var canvas = new cba.Canvas3ds("#ThreeDSCanvas", "' . $this->getAuthenticationToken() . '");        
         canvas.load();
+        function handleRedirect(data) {
+            var queryParams = Object.keys(data)
+                .map(key => `${key}=${encodeURIComponent(data[key])}`)
+                .join("&");
+            var baseUrl = "' . $this->getRedirectUrl() . '";
+            var hasParams = baseUrl.indexOf("?") !== -1;
+            var redirectUrl = baseUrl + (hasParams ? "&" : "?") + queryParams;
+            window.location.href = redirectUrl;
+        }
         canvas.on("chargeAuthSuccess", function(data) {
             console.log(data);
+            handleRedirect(data)
         });
         canvas.on("chargeAuthReject", function(data) {
             console.log(data);
+            handleRedirect(data)
         });
     </script>
 </body>

@@ -69,6 +69,7 @@ class AuthenticateRequest extends AbstractCardRequest
         return $this->makeResponse([
             'authenticationToken' => $this->getAuthenticationToken(),
             'sdkJsUrl' => $this->getSdkJsUrl(),
+            'returnUrl' => $this->getReturnUrl(),
         ]);
     }
 }
