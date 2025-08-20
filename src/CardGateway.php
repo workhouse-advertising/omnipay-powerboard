@@ -27,18 +27,18 @@ class CardGateway extends AbstractGateway
         return $request;
     }
 
-    /**
-     * Initiate 3DS authentication.
-     *
-     * @param array $options
-     * @return \Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest
-     */
-    public function initiateAuthentication(array $options = [])
-    {
-        $request = $this->createRequest(\Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest::class, $options);
-        /** @var \Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest $request */
-        return $request;
-    }
+    // /**
+    //  * Initiate 3DS authentication.
+    //  *
+    //  * @param array $options
+    //  * @return \Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest
+    //  */
+    // public function initiateAuthentication(array $options = [])
+    // {
+    //     $request = $this->createRequest(\Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest::class, $options);
+    //     /** @var \Omnipay\Powerboard\Message\Card\InitiateAuthenticationRequest $request */
+    //     return $request;
+    // }
 
     /**
      * Handle 3DS authentication.
@@ -50,6 +50,19 @@ class CardGateway extends AbstractGateway
     {
         $request = $this->createRequest(\Omnipay\Powerboard\Message\Card\AuthenticateRequest::class, $options);
         /** @var \Omnipay\Powerboard\Message\Card\AuthenticateRequest $request */
+        return $request;
+    }
+
+    /**
+     * Handle 3DS authentication with a transparent redirect.
+     *
+     * @param array $options
+     * @return \Omnipay\Powerboard\Message\Card\AuthenticateWithRedirectRequest
+     */
+    public function authenticateWithRedirect(array $options = [])
+    {
+        $request = $this->createRequest(\Omnipay\Powerboard\Message\Card\AuthenticateWithRedirectRequest::class, $options);
+        /** @var \Omnipay\Powerboard\Message\Card\AuthenticateWithRedirectRequest $request */
         return $request;
     }
 
