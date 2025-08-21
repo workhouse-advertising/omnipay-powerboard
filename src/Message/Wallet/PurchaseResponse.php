@@ -12,7 +12,7 @@ class PurchaseResponse extends AbstractResponse
     public function isSuccessful()
     {
         // TODO: Check and confirm available charge statuses, etc...
-        return $this->getChargeStatus() == 'completed';
+        return $this->getChargeStatus() == 'complete';
     }
 
     /**

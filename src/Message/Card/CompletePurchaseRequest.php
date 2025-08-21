@@ -15,6 +15,9 @@ class CompletePurchaseRequest extends PurchaseRequest
 
         if ($this->get3dsRequired()) {
             $this->validate('charge3dsId');
+        }
+
+        if ($this->getCharge3dsId()) {
             $data['_3ds']['id'] = $this->getCharge3dsId();
         }
 

@@ -11,6 +11,9 @@ class PurchaseResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
+        // TODO: Consider if we should check against the charge instead or if we can rely on
+        //       the checkout status. It's a bit irritating that the checkout uses `completed`
+        //       and charges use `complete`.
         return ($this->getIntent()['status'] ?? null) == 'completed';
     }
 
