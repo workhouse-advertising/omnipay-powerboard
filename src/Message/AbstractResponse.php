@@ -16,6 +16,7 @@ abstract class AbstractResponse extends BaseAbstractResponse implements Redirect
         // TODO: Map all expected error codes to a user friendly string that does not
         //       expose the actual error reason.
         'unspecified_error' => 'An unspecified error occurred',
+        'validation_error' => 'There was an error validating your request',
     ];
 
     /**

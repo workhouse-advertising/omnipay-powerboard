@@ -3,9 +3,9 @@
 namespace Omnipay\Powerboard\Test\Message\Card;
 
 use Omnipay\Powerboard\Message\Card\CreateSessionRequest;
-use Omnipay\Tests\TestCase;
+use Omnipay\Powerboard\Test\Message\AbstractMessageTestCase;
 
-class CreateSessionRequestTest extends TestCase
+class CreateSessionRequestTest extends AbstractMessageTestCase
 {
     /**
      * @var \Omnipay\Powerboard\Message\Card\CreateSessionRequest

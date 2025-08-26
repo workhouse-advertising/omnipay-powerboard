@@ -1,0 +1,139 @@
+HTTP/1.1 201 Created
+Date: Tue, 26 Aug 2025 03:29:12 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 4560
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+x-correlation-id: 055bd186-6d61-4657-81c3-4a7323756fe1
+x-external-duration: 1278
+x-retry-delay: 0
+x-monitoring-charge-customer-payment-source-type: card
+x-monitoring-charge-customer-payment-source-scheme: mastercard
+x-monitoring-charge-status: complete
+x-monitoring-charge-type: financial
+x-monitoring-charge-amount: 3298
+x-monitoring-charge-currency: AUD
+x-monitoring-charge-customer-payment-source-service-id: 677f1727cf73ceed6dde9e44
+x-monitoring-charge-customer-payment-source-service-type: MasterCard
+x-monitoring-acl-permission: charges:create
+x-monitoring-acl-ip: 192.168.0.1
+x-monitoring-acl-scope: company
+x-monitoring-acl-scope-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-company-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-brand-id: 66504a25689973cb3240d6c5
+x-monitoring-acl-global-id: 000000000000000000000001
+etag: W/"11d0-ZDaeOX/ACTaLSavKyyPBcz7mB5w"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+  "status": 201,
+  "error": null,
+  "resource": {
+    "type": "charge",
+    "data": {
+      "transfer": {
+        "items": []
+      },
+      "schedule": {
+        "stopped": false
+      },
+      "statistics": {
+        "total_refunded_amount": 0,
+        "full_refund": false,
+        "need_sync": true
+      },
+      "customer": {
+        "first_name": "Test",
+        "last_name": "tester",
+        "email": "simon@workhouse.au",
+        "payment_source": {
+          "vault_token": "42dbc003-4b6d-4d15-ad80-1054db5b8adf",
+          "type": "card",
+          "card_name": "Test Tester",
+          "card_number_bin": "51234500",
+          "card_number_last4": "0008",
+          "card_scheme": "mastercard",
+          "card_funding_method": "DEBIT",
+          "expire_month": 1,
+          "expire_year": 2039,
+          "address_line1": "2 Egret St",
+          "address_city": "STIRLING",
+          "address_postcode": "6021",
+          "address_state": "WA",
+          "address_country": "AU",
+          "gateway_id": "677f1727cf73ceed6dde9e44",
+          "gateway_type": "MasterCard",
+          "gateway_name": "MasterCard",
+          "vault_type": "session",
+          "items": []
+        }
+      },
+      "_3ds": {
+        "id": "76443175-abec-49db-b78d-081e5672295d",
+        "token": "eyJjb250ZW50IjoiPGRpdiBpZD1cInRocmVlZHNDaGFsbGVuZ2VSZWRpcmVjdFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMTk5OS9odG1sXCIgc3R5bGU9XCIgaGVpZ2h0OiAxMDB2aFwiPiA8Zm9ybSBpZCA9XCJ0aHJlZWRzQ2hhbGxlbmdlUmVkaXJlY3RGb3JtXCIgbWV0aG9kPVwiUE9TVFwiIGFjdGlvbj1cImh0dHBzOi8vbXRmLmdhdGV3YXkubWFzdGVyY2FyZC5jb20vYWNzL21hc3RlcmNhcmQvdjIvcHJvbXB0XCIgdGFyZ2V0PVwiY2hhbGxlbmdlRnJhbWVcIj4gPGlucHV0IHR5cGU9XCJoaWRkZW5cIiBuYW1lPVwiY3JlcVwiIHZhbHVlPVwiZXlKMGFISmxaVVJUVTJWeWRtVnlWSEpoYm5OSlJDSTZJbVJrWXpZeU9EUm1MVGRtWVRBdE5HVmlPUzA0WWpBeUxUQTVNelkyWldWaU5tWmlNU0o5XCIgLz4gPC9mb3JtPiA8aWZyYW1lIGlkPVwiY2hhbGxlbmdlRnJhbWVcIiBuYW1lPVwiY2hhbGxlbmdlRnJhbWVcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgPjwvaWZyYW1lPiA8c2NyaXB0IGlkPVwiYXV0aGVudGljYXRlLXBheWVyLXNjcmlwdFwiPiB2YXIgZT1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInRocmVlZHNDaGFsbGVuZ2VSZWRpcmVjdEZvcm1cIik7IGlmIChlKSB7IGUuc3VibWl0KCk7IGlmIChlLnBhcmVudE5vZGUgIT09IG51bGwpIHsgZS5wYXJlbnROb2RlLnJlbW92ZUNoaWxkKGUpOyB9IH0gPC9zY3JpcHQ+IDwvZGl2PiIsImZvcm1hdCI6Imh0bWwiLCJjaGFyZ2VfM2RzX2lkIjoiNzY0NDMxNzUtYWJlYy00OWRiLWI3OGQtMDgxZTU2NzIyOTVkIn0="
+      },
+      "_id": "68ad29fac2b8434477693452",
+      "logs_migrated": false,
+      "amount": 3298,
+      "currency": "AUD",
+      "status": "complete",
+      "type": "financial",
+      "company_id": "677efbdee4411a5bd12d54a7",
+      "capture": true,
+      "authorization": false,
+      "archived": false,
+      "one_off": true,
+      "reference": "568cedf0-8b37-4ed3-a127-860817fd5066",
+      "_source_ip_address": "192.168.0.1",
+      "items": [],
+      "transactions": [
+        {
+          "_3ds": {
+            "gateway_status": "AUTHENTICATION_SUCCESSFUL",
+            "challenge": true,
+            "gateway_result": "SUCCESS",
+            "gateway_recommendation": "PROCEED"
+          },
+          "gateway_specific_code": null,
+          "gateway_specific_description": null,
+          "error_message": null,
+          "error_code": null,
+          "status_code": null,
+          "status_code_description": null,
+          "type": "3ds",
+          "status": "complete",
+          "amount": 3298,
+          "currency": "AUD",
+          "_id": "68ad29fac2b8434477693455",
+          "created_at": "2025-08-26T03:28:58.182Z",
+          "updated_at": "2025-08-26T03:29:08.553Z",
+          "processed_at": "2025-08-26T03:29:00.469Z"
+        },
+        {
+          "type": "sale",
+          "status": "complete",
+          "amount": 3298,
+          "currency": "AUD",
+          "gateway_specific_code": null,
+          "gateway_specific_description": null,
+          "error_message": null,
+          "error_code": null,
+          "status_code": null,
+          "status_code_description": null,
+          "_id": "68ad2a06cc773c82ad78425e",
+          "created_at": "2025-08-26T03:29:10.762Z",
+          "first_payment": true,
+          "external_id": "86f9a2a7-ea08-4f59-89d8-092f92f18fa2:b5be48ca-9c52-4480-9373-42298bff84e1",
+          "external_reference": "523803144055",
+          "authorization_code": "144055",
+          "processed_at": "2025-08-26T03:29:12.208Z"
+        }
+      ],
+      "created_at": "2025-08-26T03:28:58.165Z",
+      "updated_at": "2025-08-26T03:29:12.208Z",
+      "__v": 2,
+      "external_id": "86f9a2a7-ea08-4f59-89d8-092f92f18fa2:b5be48ca-9c52-4480-9373-42298bff84e1"
+    }
+  }
+}
