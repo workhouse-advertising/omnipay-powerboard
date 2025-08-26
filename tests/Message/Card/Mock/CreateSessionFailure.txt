@@ -1,0 +1,35 @@
+HTTP/1.1 400 Bad Request
+Date: Tue, 26 Aug 2025 02:00:55 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 390
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+x-correlation-id: 920bc9b6-31b9-4e6c-9ff4-a199928d9be3
+x-external-duration: 0
+x-retry-delay: 0
+etag: W/"186-GmBJ+S+do5fpZPuJjxcXcRq6xZA"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+  "status": 400,
+  "error": {
+    "message": "Token Not found",
+    "details": [
+      "No Tokens found with provided id"
+    ]
+  },
+  "resource": {
+    "type": "payment_source",
+    "data": null
+  },
+  "error_summary": {
+    "message": "Token Not found",
+    "code": "unspecified_error",
+    "details": {
+      "messages": [
+        "No Tokens found with provided id"
+      ]
+    }
+  }
+}

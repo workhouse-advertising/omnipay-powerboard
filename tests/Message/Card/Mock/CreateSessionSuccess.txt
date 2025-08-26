@@ -1,0 +1,37 @@
+HTTP/1.1 201 Created
+Date: Tue, 26 Aug 2025 02:09:01 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 653
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+x-correlation-id: dc82a790-cdee-425e-812b-9ccbdce7099f
+x-external-duration: 0
+x-retry-delay: 0
+etag: W/"28d-R+k6OUmYdOBnsW+2HwLnmqjYl8g"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+  "status": 201,
+  "error": null,
+  "resource": {
+    "type": "payment_source",
+    "data": {
+      "vault_token": "e5683fc1-3bbf-4859-8697-3475e64d1469",
+      "type": "card",
+      "company_id": "697efbdee4411a5bd12d54a7",
+      "card_name": "Test Tester",
+      "card_number_last4": "1111",
+      "card_number_bin": "44443333",
+      "card_scheme": "visa",
+      "status": "active",
+      "expire_month": 1,
+      "expire_year": 2039,
+      "created_at": "2025-08-26T02:08:57.583Z",
+      "updated_at": "2025-08-26T02:09:01.597Z",
+      "_source_ip_address": "192.168.0.1",
+      "vault_ccv_stored": true,
+      "vault_type": "session"
+    }
+  }
+}
