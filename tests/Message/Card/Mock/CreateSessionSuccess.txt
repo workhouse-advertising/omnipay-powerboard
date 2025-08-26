@@ -17,9 +17,9 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
   "resource": {
     "type": "payment_source",
     "data": {
-      "vault_token": "e5683fc1-3bbf-4859-8697-3475e64d1469",
+      "vault_token": "e5683fc1-3bbf-4859-8677-3475e64d1467",
       "type": "card",
-      "company_id": "697efbdee4411a5bd12d54a7",
+      "company_id": "677efbdee4411a5bd12d54a7",
       "card_name": "Test Tester",
       "card_number_last4": "1111",
       "card_number_bin": "44443333",
