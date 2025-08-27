@@ -22,7 +22,7 @@
         }
 
         try {
-            var canvas = new cba.Canvas3ds("#ThreeDSCanvas", "<?php echo $authenticationToken ?? null ?>");        
+            var canvas = new cba.Canvas3ds("#ThreeDSCanvas", "<?php echo $authenticationToken ?? null ?>");
             canvas.load();
             canvas.on("chargeAuthSuccess", function(data) {
                 console.log(data);
