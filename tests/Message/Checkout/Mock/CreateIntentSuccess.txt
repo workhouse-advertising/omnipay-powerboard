@@ -1,0 +1,15 @@
+HTTP/1.1 201 Created
+Date: Tue, 26 Aug 2025 02:41:24 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 932
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: a629c767-7c66-44c7-a3bf-af01826c42b2
+etag: W/"3a4-NEGI5u/GcHAge8i/zurP8sYvLis"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"status":201,"error":null,"resource":{"type":"checkout","data":{"_id":"68ad1ed4ac654f14f920df56","version":1,"status":"active","reason":null,"amount":3298,"currency":"AUD","reference":"40c35200-fca4-444d-8ee4-84bb765564d6","journey":[],"created_at":"2025-08-26T02:41:24.805Z","updated_at":"2025-08-26T02:41:24.805Z","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWQxZWQ0ZWNlNDE3Mzg2OWQ3NmRjNCIsIm1ldGEiOiJleUpsYm5ZaU9pSndjbVZ3Y205a2RXTjBhVzl1WDJOaVlTSXNJbVZ1ZGw5b2IzTjBJam9pWVhCd0xuQnlaWEJ5YjJSMVkzUnBiMjR1Y0c5M1pYSmliMkZ5WkM1amIyMXRZbUZ1YXk1amIyMHVZWFVpTENKcGJuUmxiblJmYVdRaU9pSTJPR0ZrTVdWa05HRmpOalUwWmpFMFpqa3lNR1JtTlRZaUxDSjJaWEp6YVc5dUlqb3hMQ0psYm5aZllXeHBZWE1pT2lKamIyMXRZbUZ1YXk1amIyMHVZWFVpZlE9PSIsImlhdCI6MTc1NjE3NjA4NCwiZXhwIjoxNzU2MTc3MDQ0fQ.tvwa3zhT_W51DRq6E_HDW_N6ZGVtE3u4OEwrWSoPVW0","recommended_sdk_version_url":"https://widget.preproduction.powerboard.commbank.com.au/sdk/v1.127.0/widget.umd.min.js"}}}

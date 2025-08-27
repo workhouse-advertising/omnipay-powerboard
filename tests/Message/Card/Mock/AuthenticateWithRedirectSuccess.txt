@@ -1,0 +1,30 @@
+HTTP/1.1 201 Created
+Date: Tue, 26 Aug 2025 03:29:00 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2826
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-monitoring-acl-permission: charges:pre-auth
+x-monitoring-acl-company-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-brand-id: 66504a25689973cb3240d6c5
+x-monitoring-acl-global-id: 000000000000000000000001
+x-monitoring-acl-ip: 192.168.0.1
+x-monitoring-acl-scope: company
+x-monitoring-acl-scope-id: 677efbdee4411a5bd12d54a7
+x-monitoring-charge-customer-payment-source-type: card
+x-monitoring-charge-customer-payment-source-scheme: mastercard
+x-monitoring-charge-status: pre_authentication_pending
+x-monitoring-charge-type: financial
+x-monitoring-charge-amount: 3298
+x-monitoring-charge-currency: AUD
+x-monitoring-charge-customer-payment-source-service-id: 677f1727cf73ceed6dde9e44
+x-monitoring-charge-customer-payment-source-service-type: MasterCard
+x-external-duration: 2123
+x-retry-delay: 0
+x-correlation-id: 69e2c710-3f60-4e21-9b23-f69b5275a330
+etag: W/"b0a-s6QVyhaAyZbTvGbj9RyOK4ubbsA"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"status":201,"error":null,"resource":{"type":"charge","data":{"logs_migrated":false,"created_at":"2025-08-26T03:28:58.165Z","updated_at":"2025-08-26T03:29:00.490Z","external_id":"86f9a2a7-ea08-4f59-89d8-092f92f18fa2:14924e42-4ef2-457c-b1ad-4e4b1c692497","transfer":{"items":[]},"items":[],"schedule":{"stopped":false},"statistics":{"total_refunded_amount":0,"full_refund":false,"need_sync":true},"amount":3298,"currency":"AUD","status":"pre_authentication_pending","type":"financial","company_id":"677efbdee4411a5bd12d54a7","capture":true,"authorization":false,"customer":{"first_name":"Test","last_name":"tester","email":"simon@workhouse.au","payment_source":{"type":"card","card_name":"Test Tester","card_number_last4":"0008","card_number_bin":"51234500","card_number_hash_uuid":"143defdd-4198-499c-8715-17575699eab7","card_scheme":"mastercard","card_funding_method":"DEBIT","expire_month":1,"expire_year":2039,"address_line1":"2 Egret St","address_city":"STIRLING","address_postcode":"6021","address_state":"WA","address_country":"AU","gateway_id":"677f1727cf73ceed6dde9e44","gateway_type":"MasterCard","gateway_name":"MasterCard","vault_token":"42dbc003-4b6d-4d15-ad80-1054db5b8adf","vault_type":"session","items":[]}},"archived":false,"one_off":true,"reference":"568cedf0-8b37-4ed3-a127-860817fd5066","transactions":[{"created_at":"2025-08-26T03:28:58.182Z","type":"3ds","status":"complete","amount":3298,"currency":"AUD","service_logs":[],"_3ds":{"gateway_status":"AUTHENTICATION_PENDING","challenge":true},"processed_at":"2025-08-26T03:29:00.469Z","_id":"68ad29fac2b8434477693455","updated_at":"2025-08-26T03:29:00.469Z"}],"_source_ip_address":"192.168.0.1","_3ds":{"id":"76443175-abec-49db-b78d-081e5672295d","token":"eyJjb250ZW50IjoiPGRpdiBpZD1cInRocmVlZHNDaGFsbGVuZ2VSZWRpcmVjdFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMTk5OS9odG1sXCIgc3R5bGU9XCIgaGVpZ2h0OiAxMDB2aFwiPiA8Zm9ybSBpZCA9XCJ0aHJlZWRzQ2hhbGxlbmdlUmVkaXJlY3RGb3JtXCIgbWV0aG9kPVwiUE9TVFwiIGFjdGlvbj1cImh0dHBzOi8vbXRmLmdhdGV3YXkubWFzdGVyY2FyZC5jb20vYWNzL21hc3RlcmNhcmQvdjIvcHJvbXB0XCIgdGFyZ2V0PVwiY2hhbGxlbmdlRnJhbWVcIj4gPGlucHV0IHR5cGU9XCJoaWRkZW5cIiBuYW1lPVwiY3JlcVwiIHZhbHVlPVwiZXlKMGFISmxaVVJUVTJWeWRtVnlWSEpoYm5OSlJDSTZJbVJrWXpZeU9EUm1MVGRtWVRBdE5HVmlPUzA0WWpBeUxUQTVNelkyWldWaU5tWmlNU0o5XCIgLz4gPC9mb3JtPiA8aWZyYW1lIGlkPVwiY2hhbGxlbmdlRnJhbWVcIiBuYW1lPVwiY2hhbGxlbmdlRnJhbWVcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgPjwvaWZyYW1lPiA8c2NyaXB0IGlkPVwiYXV0aGVudGljYXRlLXBheWVyLXNjcmlwdFwiPiB2YXIgZT1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInRocmVlZHNDaGFsbGVuZ2VSZWRpcmVjdEZvcm1cIik7IGlmIChlKSB7IGUuc3VibWl0KCk7IGlmIChlLnBhcmVudE5vZGUgIT09IG51bGwpIHsgZS5wYXJlbnROb2RlLnJlbW92ZUNoaWxkKGUpOyB9IH0gPC9zY3JpcHQ+IDwvZGl2PiIsImZvcm1hdCI6Imh0bWwiLCJjaGFyZ2VfM2RzX2lkIjoiNzY0NDMxNzUtYWJlYy00OWRiLWI3OGQtMDgxZTU2NzIyOTVkIn0="},"_id":"68ad29fac2b8434477693452","__v":1}}}

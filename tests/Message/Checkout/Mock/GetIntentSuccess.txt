@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Tue, 26 Aug 2025 02:41:23 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 863
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: 25a88c2a-5f7b-43ef-9705-b86ec4e269cd
+etag: W/"35f-H2ki246RmJmO5LdR4aqZRJsbN5c"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"status":200,"error":null,"resource":{"type":"checkout","data":{"_id":"68ad1766ac654f14f920df48","version":1,"status":"expired","reason":null,"amount":3298,"currency":"AUD","reference":"2c88a2de-be09-45f6-8fa8-16c13e9f4e54","journey":[{"sense":"info","title":"CheckoutFlow created","message":"Checkout process created ....","thread":"main","context":null,"paymentFlow_id":null,"_id":"68ad17671ef33e3685b92a6d","created_at":"2025-08-26T02:09:43.107Z","updatedAt":"2025-08-26T02:09:43.107Z"},{"sense":"error","title":"Session expired","message":"The session has timed out","thread":"main","context":"{\"intent_id\":\"68ad1766ac654f14f920df48\"}","paymentFlow_id":null,"_id":"68ad1aeb1ef33e3685b92a76","created_at":"2025-08-26T02:24:43.674Z","updatedAt":"2025-08-26T02:24:43.674Z"}],"created_at":"2025-08-26T02:09:42.457Z","updated_at":"2025-08-26T02:24:43.760Z"}}}

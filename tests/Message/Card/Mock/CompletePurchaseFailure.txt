@@ -1,0 +1,40 @@
+HTTP/1.1 400 Bad Request
+Date: Tue, 26 Aug 2025 02:44:20 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 373
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+x-correlation-id: ddc7d990-53d5-49b2-89fb-1187ab2e6634
+x-external-duration: 0
+x-retry-delay: 0
+x-monitoring-error-summary-message: Charge%20not%20authenticated%20using%203d%20secure%20process
+x-monitoring-error-summary-code: unfulfilled_condition
+x-monitoring-acl-permission: charges:create
+x-monitoring-acl-ip: 192.168.0.1
+x-monitoring-acl-scope: company
+x-monitoring-acl-scope-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-company-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-brand-id: 66504a25689973cb3240d6c5
+x-monitoring-acl-global-id: 000000000000000000000001
+etag: W/"175-3zxICaAuk225tPvKXZyGmviDSO4"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+  "status": 400,
+  "error": {
+    "message": "Charge not authenticated using 3d secure process",
+    "code": "UnfulfilledCondition"
+  },
+  "resource": {
+    "type": "charge",
+    "data": null
+  },
+  "error_summary": {
+    "message": "Charge not authenticated using 3d secure process",
+    "code": "unfulfilled_condition",
+    "details": {
+      "messages": []
+    }
+  }
+}
