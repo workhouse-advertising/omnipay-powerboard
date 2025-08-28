@@ -1,0 +1,15 @@
+HTTP/1.1 400 Bad Request
+Date: Thu, 28 Aug 2025 06:39:26 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 493
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: e5062624-8af4-4991-b66c-292eeabcf740
+etag: W/"10e-+wvD3J3lFsjwwnNs5bQq8AQ2T5U"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"status":400,"error":{"message":"Bad Request","code":"validation_error","details":{"path":"","messages":["amount should not be empty","amount must be a number conforming to the specified constraints","amount must be a positive number"]}},"resource":{"type":"checkout"},"error_summary":{"message":"Bad Request","code":"validation_error","details":{"messages":["amount should not be empty","amount must be a number conforming to the specified constraints","amount must be a positive number"]}}}
