@@ -37,4 +37,21 @@ class AuthenticateResponse extends AbstractResponse
     {
         return $this->getCharge()['_3ds']['token'] ?? null;
     }
+
+    /**
+     * @return bool
+     */
+    public function isAuthenticationNotAvailable()
+    {
+        return $this->getChargeStatus() == 'authentication_not_supported';
+    }
+
+    /**
+     * @return bool
+     */
+    public function shouldProceed()
+    {
+        // TODO: Is this useful or required any more? Or only relevant for the MPGS portal?
+        return (bool) $this->isSuccessful();
+    }
 }
