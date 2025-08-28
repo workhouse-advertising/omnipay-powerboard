@@ -1,0 +1,15 @@
+HTTP/1.1 400 Bad Request
+Date: Thu, 28 Aug 2025 07:23:53 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 285
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: 690e9fed-658e-4ea7-be89-f83a179775a9
+etag: W/"a6-HFxLBBB5XlbRTxOlTQVx7eH8W8Y"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"status":400,"error":{"message":"Bad Request","code":"validation_error","details":{"path":"","messages":["id must be a mongodb id"]}},"resource":{"type":"checkout"},"error_summary":{"message":"Bad Request","code":"validation_error","details":{"messages":["id must be a mongodb id"]}}}
