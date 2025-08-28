@@ -1,14 +1,14 @@
 <?php
 
-namespace Omnipay\Powerboard\Test\Message\Card;
+namespace Omnipay\Powerboard\Test\Message\Checkout;
 
-use Omnipay\Powerboard\Message\Checkout\CreateIntentRequest;
+use Omnipay\Powerboard\Message\Checkout\CreateIntentRequest as Request;
 use Omnipay\Powerboard\Test\Message\AbstractMessageTestCase;
 
 class CreateIntentRequestTest extends AbstractMessageTestCase
 {
     /**
-     * @var \Omnipay\Powerboard\Message\Card\AuthenticateRequest
+     * @var Request
      */
     protected $request;
 
@@ -19,7 +19,7 @@ class CreateIntentRequestTest extends AbstractMessageTestCase
     {
         $client = $this->getHttpClient();
         $request = $this->getHttpRequest();
-        $this->request = new CreateIntentRequest($client, $request);
+        $this->request = new Request($client, $request);
 
         $this->request->initialize([
             'amount' => 3298.00,
