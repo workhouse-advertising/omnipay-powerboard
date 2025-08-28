@@ -18,6 +18,7 @@ abstract class AbstractResponse extends BaseAbstractResponse implements Redirect
         'unfulfilled_condition' => 'There was an error processing the payment due to an unfulfilled condition',
         'unspecified_error' => 'An unspecified error occurred',
         'validation_error' => 'There was an error validating your request',
+        'not_found' => 'The payment could not be processed because a resource could not be found',
     ];
 
     /**
