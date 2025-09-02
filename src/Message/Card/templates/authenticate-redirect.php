@@ -25,12 +25,10 @@
             var canvas = new cba.Canvas3ds("#ThreeDSCanvas", "<?php echo $authenticationToken ?? null ?>");
             canvas.load();
             canvas.on("chargeAuthSuccess", function(data) {
-                console.log(data);
-                handleRedirect(data)
+                handleRedirect(data);
             });
             canvas.on("chargeAuthReject", function(data) {
-                console.log(data);
-                handleRedirect(data)
+                handleRedirect(data);
             });
         } catch (error) {
             alert(error);
