@@ -11,6 +11,7 @@ class AuthenticateResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
+        // TODO: Should this be considering more than 201. Maybe consider $this->getChargeStatus() == 'authenticated', we currently ignore 'pre_authentication_pending' and maybe we shouldn't
         return ($this->getData()['status'] ?? null) == 201;
     }
 
