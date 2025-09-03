@@ -62,6 +62,6 @@ class CreateSessionRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('An unspecified error occurred', $response->getMessage());
+        $this->assertSame('An unspecified error occurred so the purchase could not be completed', $response->getMessage());
     }
 }

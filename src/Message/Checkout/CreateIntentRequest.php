@@ -14,9 +14,6 @@ class CreateIntentRequest extends AbstractCheckoutRequest
         $this->validate(
             'amount',
             'currency',
-            'version',
-            'customisationTemplateId',
-            'configurationTemplateId',
         );
 
         $data = [

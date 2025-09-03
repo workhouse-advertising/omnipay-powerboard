@@ -122,6 +122,6 @@ class CompletePurchaseRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('There was an error processing the payment due to an unfulfilled condition', $response->getMessage());
+        $this->assertSame('There was an unfulfilled condition so the purchase could not be completed', $response->getMessage());
     }
 }

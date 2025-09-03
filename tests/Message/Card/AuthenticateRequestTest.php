@@ -87,6 +87,6 @@ class AuthenticateRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('There was an error validating your request', $response->getMessage());
+        $this->assertSame('There was an error validating your request so the purchase could not be completed', $response->getMessage());
     }
 }
