@@ -33,7 +33,6 @@ trait GatewayParameters
      */
     public function getSdkJsUrl()
     {
-        // TODO: Update this to use a specific versioned version of the JS.
         return sprintf('%s/sdk/latest/widget.umd.js', $this->getBaseAssetUrl());
     }
 
