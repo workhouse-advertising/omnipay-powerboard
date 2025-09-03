@@ -11,7 +11,6 @@ class CreateWalletRequest extends AbstractWalletRequest
      */
     public function getData()
     {
-        // TODO: Add other fields for validation.
         $this->validate(
             'amount',
             'currency',
