@@ -1,0 +1,170 @@
+HTTP/1.1 200 OK
+Date: Wed, 03 Sep 2025 07:11:44 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 16301
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-monitoring-acl-permission: charges:get
+x-monitoring-acl-company-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-brand-id: 66504a25689973cb3240d6c5
+x-monitoring-acl-global-id: 000000000000000000000001
+x-monitoring-acl-ip: 123.103.220.210
+x-monitoring-acl-scope: company
+x-monitoring-acl-scope-id: 677efbdee4411a5bd12d54a7
+x-monitoring-charge-customer-payment-source-type: card
+x-monitoring-charge-customer-payment-source-scheme: mastercard
+x-monitoring-charge-status: complete
+x-monitoring-charge-type: financial
+x-monitoring-charge-amount: 1000
+x-monitoring-charge-currency: AUD
+x-monitoring-charge-customer-payment-source-service-id: 677f1727cf73ceed6dde9e44
+x-monitoring-charge-customer-payment-source-service-type: MasterCard
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: a1e016ad-eb1d-43ef-8068-5dff8ae841de
+etag: W/"3fad-QZVIplXoEwKkVM/asMMFVHeWbSA"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "status": 200,
+    "error": null,
+    "resource": {
+        "type": "charge",
+        "data": {
+            "_id": "68b7e84a22423a77c15927c2",
+            "logs_migrated": false,
+            "transfer": {
+                "items": []
+            },
+            "schedule": {
+                "stopped": false
+            },
+            "statistics": {
+                "total_refunded_amount": 0,
+                "full_refund": false,
+                "need_sync": true
+            },
+            "amount": 1000,
+            "currency": "AUD",
+            "status": "complete",
+            "type": "financial",
+            "company_id": "677efbdee4411a5bd12d54a7",
+            "capture": true,
+            "authorization": false,
+            "customer": {
+                "first_name": "First",
+                "last_name": "Last",
+                "email": "cam@exmple.com",
+                "payment_source": {
+                    "vault_token": "aecf5d74-cb78-4732-9d0e-d024399b6171",
+                    "type": "card",
+                    "card_name": "3DSecure Test Cards for Frictionless Workflow",
+                    "card_number_bin": "51234567",
+                    "card_number_last4": "2346",
+                    "card_scheme": "mastercard",
+                    "card_funding_method": "DEBIT",
+                    "expire_month": 1,
+                    "expire_year": 2030,
+                    "address_line1": "U 1  1 Example St",
+                    "address_city": "MOUNT LAWLEY",
+                    "address_postcode": "6050",
+                    "address_state": "WA",
+                    "address_country": "AU",
+                    "gateway_id": "677f1727cf73ceed6dde9e44",
+                    "gateway_type": "MasterCard",
+                    "gateway_name": "MasterCard",
+                    "vault_type": "session",
+                    "items": []
+                }
+            },
+            "archived": false,
+            "one_off": true,
+            "reference": "0f1240d8-b185-4c6f-92c3-408c45fda6f1",
+            "_source_ip_address": "123.103.220.210",
+            "_3ds": {
+                "id": "48c803bc-e4fd-4660-ad7e-ab68d013afc8",
+                "token": "eyJjb250ZW50IjoiPGRpdiBpZD1cInRocmVlZHNGcmljdGlvbkxlc3NSZWRpcmVjdFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMTk5OS9odG1sXCI+IDxpZnJhbWUgaWQ9XCJjaGFsbGVuZ2VGcmFtZVwiIG5hbWU9XCJjaGFsbGVuZ2VGcmFtZVwiPiA8L2lmcmFtZT4gPGZvcm0gaWQ9XCJ0aHJlZWRzRnJpY3Rpb25MZXNzUmVkaXJlY3RGb3JtXCIgbWV0aG9kPVwiUE9TVFwiIGFjdGlvbj1cImh0dHBzOi8vYXBpLnByZXByb2R1Y3Rpb24ucG93ZXJib2FyZC5jb21tYmFuay5jb20uYXUvdjEvM2RzL3dlYmhvb2tzP3Nob3dfbWVzc2FnZXM9dHJ1ZSZhbXA7eC1hY2Nlc3MtdG9rZW49ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBaQ0k2SWpZNFlqZGxPRFJpTW1Oa1l6SXhaVGhrWkdKalkyUXpNU0lzSW0xbGRHRWlPaUpsZVVwcVlVZEdlVm95Vm1aTk1sSjZXREpzYTBscWIybE9SR2hxVDBSQmVsbHRUWFJhVkZKdFdrTXdNRTVxV1hkTVYwWnJUakpWZEZsWFNUSlBSMUYzVFZST2FGcHRUVFJKYmpBOUlpd2lhV0YwSWpveE56VTJPRGd6TURFNUxDSmxlSEFpT2pFM05UWTRPRFF5TVRsOS5yMkpIbzZEdVlXMlNNekxnUmhkZWxvRXAtdGtjRHZTSGdtbEE3a2NoU1FrXCIgdGFyZ2V0PVwiY2hhbGxlbmdlRnJhbWVcIj4gPGlucHV0IHR5cGU9XCJoaWRkZW5cIiBuYW1lPVwib3JkZXIuaWRcIiB2YWx1ZT1cIjgxNGZiMDY3LWUxYjctNDVlYS05YzhhLWFiM2E0ZTViZTA4OFwiIC8+IDxpbnB1dCB0eXBlPVwiaGlkZGVuXCIgbmFtZT1cInRyYW5zYWN0aW9uLmlkXCIgdmFsdWU9XCI3MjRmMTY2OC04YjBlLTQ2ZTgtODVkNC1iNDZhNWFjYjlkMDhcIiAvPiA8aW5wdXQgdHlwZT1cImhpZGRlblwiIG5hbWU9XCJyZXNwb25zZS5nYXRld2F5UmVjb21tZW5kYXRpb25cIiB2YWx1ZT1cIlBST0NFRURcIiAvPiA8aW5wdXQgdHlwZT1cImhpZGRlblwiIG5hbWU9XCJyZXN1bHRcIiB2YWx1ZT1cIlNVQ0NFU1NcIiAvPiA8L2Zvcm0+IDxzY3JpcHQgaWQ9XCJhdXRoZW50aWNhdGUtcGF5ZXItc2NyaXB0XCI+IHZhciBlPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwidGhyZWVkc0ZyaWN0aW9uTGVzc1JlZGlyZWN0Rm9ybVwiKTsgaWYgKGUpIHsgZS5zdWJtaXQoKTsgaWYgKGUucGFyZW50Tm9kZSAhPT0gbnVsbCkgeyBlLnBhcmVudE5vZGUucmVtb3ZlQ2hpbGQoZSk7IH0gfSA8L3NjcmlwdD4gPC9kaXY+IiwiZm9ybWF0IjoiaHRtbCIsImNoYXJnZV8zZHNfaWQiOiI0OGM4MDNiYy1lNGZkLTQ2NjAtYWQ3ZS1hYjY4ZDAxM2FmYzgifQ=="
+            },
+            "items": [],
+            "transactions": [
+                {
+                    "type": "3ds",
+                    "status": "complete",
+                    "amount": 1000,
+                    "currency": "AUD",
+                    "_source_ip_address": "123.103.220.210",
+                    "_id": "68b7e84a22423a77c15927c5",
+                    "service_logs": [
+                        {
+                            "req": {
+                                "body": "{\"apiOperation\":\"INITIATE_AUTHENTICATION\",\"authentication\":{\"acceptVersions\":\"3DS1,3DS2\",\"channel\":\"PAYER_BROWSER\",\"purpose\":\"PAYMENT_TRANSACTION\"},\"order\":{\"currency\":\"AUD\",\"reference\":\"0f1240d8-b185-4c6f-92c3-408c45fda6f1\"},\"sourceOfFunds\":{\"type\":\"CARD\",\"provided\":{\"card\":{\"number\":\"************2346\"}}}}",
+                                "format": "json"
+                            },
+                            "response_body": {
+                                "body": "{\"authentication\":{\"3ds2\":{\"directoryServerId\":\"A999999999\",\"methodCompleted\":false,\"methodSupported\":\"SUPPORTED\",\"protocolVersion\":\"2.2.0\",\"requestorId\":\"MAS00001_INT_MPGS_MTTESTDEVMID003\",\"requestorName\":\"Development Merchant\"},\"acceptVersions\":\"3DS1,3DS2\",\"channel\":\"PAYER_BROWSER\",\"purpose\":\"PAYMENT_TRANSACTION\",\"redirect\":{\"customizedHtml\":{\"3ds2\":{\"methodPostData\":\"eyJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIjoiaHR0cHM6Ly9tdGYuZ2F0ZXdheS5tYXN0ZXJjYXJkLmNvbS9jYWxsYmFja0ludGVyZmFjZS9nYXRld2F5LzRiOWFhOWRkYmFjZWIzMzlkZDcxNWE1YWFmNWI5NThjYmFhNDk2ZWRiODA2Y2QzYTlkMzRjZWI2ZTNkMDc1ODkiLCJ0aHJlZURTU2VydmVyVHJhbnNJRCI6ImM0ZjBhYWE3LTI5ZTEtNDljZi05YzFmLWQ3YWU5OTkxMDg4OSJ9\",\"methodUrl\":\"https://mtf.gateway.mastercard.com/acs/mastercard/v2/method\"}},\"html\":\"&lt;div id=\\\"initiate3dsSimpleRedirect\\\" xmlns=\\\"http://www.w3.org/1999/html\\\"> &lt;iframe id=\\\"methodFrame\\\" name=\\\"methodFrame\\\" height=\\\"100\\\" width=\\\"200\\\" > &lt;/iframe> &lt;form id =\\\"initiate3dsSimpleRedirectForm\\\" method=\\\"POST\\\" action=\\\"https://mtf.gateway.mastercard.com/acs/mastercard/v2/method\\\" target=\\\"methodFrame\\\"> &lt;input type=\\\"hidden\\\" name=\\\"threeDSMethodData\\\" value=\\\"eyJ0aHJlZURTTWV0aG9kTm90aWZpY2F0aW9uVVJMIjoiaHR0cHM6Ly9tdGYuZ2F0ZXdheS5tYXN0ZXJjYXJkLmNvbS9jYWxsYmFja0ludGVyZmFjZS9nYXRld2F5LzRiOWFhOWRkYmFjZWIzMzlkZDcxNWE1YWFmNWI5NThjYmFhNDk2ZWRiODA2Y2QzYTlkMzRjZWI2ZTNkMDc1ODkiLCJ0aHJlZURTU2VydmVyVHJhbnNJRCI6ImM0ZjBhYWE3LTI5ZTEtNDljZi05YzFmLWQ3YWU5OTkxMDg4OSJ9\\\" /> &lt;/form> &lt;script id=\\\"initiate-authentication-script\\\"> var e=document.getElementById(\\\"initiate3dsSimpleRedirectForm\\\"); if (e) { e.submit(); if (e.parentNode !== null) { e.parentNode.removeChild(e); } } &lt;/script> &lt;/div>\"},\"version\":\"3DS2\"},\"merchant\":\"TESTDEVMID003\",\"order\":{\"authenticationStatus\":\"AUTHENTICATION_AVAILABLE\",\"creationTime\":\"2025-09-03T07:03:39.038Z\",\"currency\":\"AUD\",\"id\":\"814fb067-e1b7-45ea-9c8a-ab3a4e5be088\",\"lastUpdatedTime\":\"2025-09-03T07:03:39.019Z\",\"merchantCategoryCode\":\"5000\",\"reference\":\"0f1240d8-b185-4c6f-92c3-408c45fda6f1\",\"status\":\"AUTHENTICATION_INITIATED\",\"totalAuthorizedAmount\":0,\"totalCapturedAmount\":0,\"totalRefundedAmount\":0},\"response\":{\"gatewayCode\":\"AUTHENTICATION_IN_PROGRESS\",\"gatewayRecommendation\":\"PROCEED\"},\"result\":\"SUCCESS\",\"sourceOfFunds\":{\"provided\":{\"card\":{\"brand\":\"MASTERCARD\",\"fundingMethod\":\"DEBIT\",\"number\":\"512345xxxxxx2346\",\"scheme\":\"MASTERCARD\"}},\"type\":\"CARD\"},\"timeOfLastUpdate\":\"2025-09-03T07:03:39.019Z\",\"timeOfRecord\":\"2025-09-03T07:03:39.038Z\",\"transaction\":{\"amount\":0,\"authenticationStatus\":\"AUTHENTICATION_AVAILABLE\",\"currency\":\"AUD\",\"id\":\"724f1668-8b0e-46e8-85d4-b46a5acb9d08\",\"type\":\"AUTHENTICATION\"},\"version\":\"75\"}",
+                                "format": "json"
+                            }
+                        },
+                        {
+                            "req": {
+                                "body": "{\"apiOperation\":\"AUTHENTICATE_PAYER\",\"authentication\":{\"redirectResponseUrl\":\"https://api.preproduction.powerboard.commbank.com.au/v1/3ds/webhooks?show_messages=true&x-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjdlODRiMmNkYzIxZThkZGJjY2QzMSIsIm1ldGEiOiJleUpqYUdGeVoyVmZNMlJ6WDJsa0lqb2lORGhqT0RBelltTXRaVFJtWkMwME5qWXdMV0ZrTjJVdFlXSTJPR1F3TVROaFptTTRJbjA9IiwiaWF0IjoxNzU2ODgzMDE5LCJleHAiOjE3NTY4ODQyMTl9.r2JHo6DuYW2SMzLgRhdeloEp-tkcDvSHgmlA7kchSQk\"},\"device\":{\"browser\":\"Google Chrome or Chromium\",\"browserDetails\":{\"3DSecureChallengeWindowSize\":\"FULL_SCREEN\",\"acceptHeaders\":\"application/json\",\"colorDepth\":\"24\",\"javaEnabled\":\"false\",\"language\":\"en-GB\",\"screenHeight\":\"1080\",\"screenWidth\":\"1920\",\"timeZone\":\"-480\"},\"ipAddress\":\"123.103.220.210\"},\"order\":{\"currency\":\"AUD\",\"amount\":1000},\"sourceOfFunds\":{\"provided\":{\"card\":{\"number\":\"************2346\",\"expiry\":{\"month\":\"**\",\"year\":\"**\"},\"securityCode\":\"***\"}}},\"billing\":{\"address\":{\"city\":\"MOUNT LAWLEY\",\"country\":\"AUS\",\"postcodeZip\":\"6050\",\"stateProvince\":\"WA\",\"street\":\"U 1  1 Example St\"}},\"customer\":{\"email\":\"cam@exmple.com\",\"firstName\":\"First\",\"lastName\":\"Last\"}}",
+                                "format": "json"
+                            },
+                            "response_body": {
+                                "body": "{\"authentication\":{\"3ds\":{\"acsEci\":\"02\",\"authenticationToken\":\"mHyn+7YFi1EUAREAAAAvNUe6Hv8=\",\"transactionId\":\"430ac456-3f26-4f74-8591-25f69688441a\"},\"3ds2\":{\"3dsServerTransactionId\":\"c4f0aaa7-29e1-49cf-9c1f-d7ae99910889\",\"acsReference\":\"MPGS_ACS_SANDBOX\",\"acsTransactionId\":\"d2bd0549-1565-42b0-b52d-d04874c440ba\",\"directoryServerId\":\"A999999999\",\"dsTransactionId\":\"430ac456-3f26-4f74-8591-25f69688441a\",\"methodCompleted\":false,\"methodSupported\":\"SUPPORTED\",\"protocolVersion\":\"2.2.0\",\"requestorId\":\"MAS00001_INT_MPGS_MTTESTDEVMID003\",\"requestorName\":\"Development Merchant\",\"transactionStatus\":\"Y\"},\"amount\":1000,\"payerInteraction\":\"NOT_REQUIRED\",\"psd2\":{\"trustedMerchantStatus\":\"ON_LIST\"},\"redirect\":{\"domainName\":\"mtf.gateway.mastercard.com\",\"html\":\"&lt;div id=\\\"threedsFrictionLessRedirect\\\" xmlns=\\\"http://www.w3.org/1999/html\\\"> &lt;iframe id=\\\"challengeFrame\\\" name=\\\"challengeFrame\\\"> &lt;/iframe> &lt;form id=\\\"threedsFrictionLessRedirectForm\\\" method=\\\"POST\\\" action=\\\"https://api.preproduction.powerboard.commbank.com.au/v1/3ds/webhooks?show_messages=true&amp;x-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjdlODRiMmNkYzIxZThkZGJjY2QzMSIsIm1ldGEiOiJleUpqYUdGeVoyVmZNMlJ6WDJsa0lqb2lORGhqT0RBelltTXRaVFJtWkMwME5qWXdMV0ZrTjJVdFlXSTJPR1F3TVROaFptTTRJbjA9IiwiaWF0IjoxNzU2ODgzMDE5LCJleHAiOjE3NTY4ODQyMTl9.r2JHo6DuYW2SMzLgRhdeloEp-tkcDvSHgmlA7kchSQk\\\" target=\\\"challengeFrame\\\"> &lt;input type=\\\"hidden\\\" name=\\\"order.id\\\" value=\\\"814fb067-e1b7-45ea-9c8a-ab3a4e5be088\\\" /> &lt;input type=\\\"hidden\\\" name=\\\"transaction.id\\\" value=\\\"724f1668-8b0e-46e8-85d4-b46a5acb9d08\\\" /> &lt;input type=\\\"hidden\\\" name=\\\"response.gatewayRecommendation\\\" value=\\\"PROCEED\\\" /> &lt;input type=\\\"hidden\\\" name=\\\"result\\\" value=\\\"SUCCESS\\\" /> &lt;/form> &lt;script id=\\\"authenticate-payer-script\\\"> var e=document.getElementById(\\\"threedsFrictionLessRedirectForm\\\"); if (e) { e.submit(); if (e.parentNode !== null) { e.parentNode.removeChild(e); } } &lt;/script> &lt;/div>\"},\"time\":\"2025-09-03T07:03:39.927Z\",\"version\":\"3DS2\"},\"billing\":{\"address\":{\"city\":\"MOUNT LAWLEY\",\"country\":\"AUS\",\"postcodeZip\":\"6050\",\"stateProvince\":\"WA\",\"street\":\"U 1  1 Example St\"}},\"customer\":{\"email\":\"cam@exmple.com\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"device\":{\"browser\":\"Google Chrome or Chromium\",\"ipAddress\":\"123.103.220.210\"},\"merchant\":\"TESTDEVMID003\",\"order\":{\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_SUCCESSFUL\",\"creationTime\":\"2025-09-03T07:03:39.038Z\",\"currency\":\"AUD\",\"id\":\"814fb067-e1b7-45ea-9c8a-ab3a4e5be088\",\"lastUpdatedTime\":\"2025-09-03T07:03:39.923Z\",\"merchantCategoryCode\":\"5000\",\"reference\":\"0f1240d8-b185-4c6f-92c3-408c45fda6f1\",\"status\":\"AUTHENTICATED\",\"totalAuthorizedAmount\":0,\"totalCapturedAmount\":0,\"totalRefundedAmount\":0,\"valueTransfer\":{\"accountType\":\"NOT_A_TRANSFER\"}},\"response\":{\"gatewayCode\":\"APPROVED\",\"gatewayRecommendation\":\"PROCEED\"},\"result\":\"SUCCESS\",\"sourceOfFunds\":{\"provided\":{\"card\":{\"brand\":\"MASTERCARD\",\"expiry\":{\"month\":\"1\",\"year\":\"30\"},\"fundingMethod\":\"DEBIT\",\"number\":\"512345xxxxxx2346\",\"scheme\":\"MASTERCARD\"}},\"type\":\"CARD\"},\"timeOfLastUpdate\":\"2025-09-03T07:03:39.923Z\",\"timeOfRecord\":\"2025-09-03T07:03:39.038Z\",\"transaction\":{\"acquirer\":{\"merchantId\":\"11111111111111\"},\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_SUCCESSFUL\",\"currency\":\"AUD\",\"id\":\"724f1668-8b0e-46e8-85d4-b46a5acb9d08\",\"type\":\"AUTHENTICATION\"},\"version\":\"75\"}",
+                                "format": "json"
+                            }
+                        }
+                    ],
+                    "created_at": "2025-09-03T07:03:38.323Z",
+                    "updated_at": "2025-09-03T07:03:40.563Z",
+                    "_3ds": {
+                        "gateway_status": "AUTHENTICATION_SUCCESSFUL",
+                        "challenge": false,
+                        "gateway_result": "SUCCESS",
+                        "gateway_recommendation": "PROCEED"
+                    },
+                    "processed_at": "2025-09-03T07:03:40.159Z"
+                },
+                {
+                    "type": "sale",
+                    "status": "complete",
+                    "amount": 1000,
+                    "currency": "AUD",
+                    "_source_ip_address": "123.103.220.210",
+                    "gateway_specific_code": null,
+                    "gateway_specific_description": null,
+                    "error_message": null,
+                    "error_code": null,
+                    "status_code": null,
+                    "status_code_description": null,
+                    "_id": "68b7e84e03b711bb2a53ea3a",
+                    "service_logs": [
+                        {
+                            "req": {
+                                "body": "{\"apiOperation\":\"PAY\",\"order\":{\"reference\":\"0f1240d8-b185-4c6f-92c3-408c45fda6f1\",\"amount\":1000,\"currency\":\"AUD\"},\"sourceOfFunds\":{\"type\":\"CARD\",\"provided\":{\"card\":{\"expiry\":{\"month\":\"**\",\"year\":\"**\"},\"number\":\"************2346\",\"nameOnCard\":\"3DSecure Test Cards for Frictionless Workflow\",\"securityCode\":\"***\",\"storedOnFile\":\"NOT_STORED\"}}},\"customer\":{\"email\":\"cam@exmple.com\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"billing\":{\"address\":{\"city\":\"MOUNT LAWLEY\",\"country\":\"AUS\",\"postcodeZip\":\"6050\",\"stateProvince\":\"WA\",\"street\":\"U 1  1 Example St\"}},\"transaction\":{\"source\":\"INTERNET\"},\"authentication\":{\"transactionId\":\"724f1668-8b0e-46e8-85d4-b46a5acb9d08\"}}",
+                                "format": "json"
+                            },
+                            "response_body": {
+                                "body": "{\"authentication\":{\"3ds\":{\"acsEci\":\"02\",\"authenticationToken\":\"mHyn+7YFi1EUAREAAAAvNUe6Hv8=\",\"transactionId\":\"430ac456-3f26-4f74-8591-25f69688441a\"},\"3ds2\":{\"dsTransactionId\":\"430ac456-3f26-4f74-8591-25f69688441a\",\"protocolVersion\":\"2.2.0\",\"transactionStatus\":\"Y\"},\"amount\":1000,\"time\":\"2025-09-03T07:03:39.927Z\",\"transactionId\":\"724f1668-8b0e-46e8-85d4-b46a5acb9d08\",\"version\":\"3DS2\"},\"authorizationResponse\":{\"cardSecurityCodeError\":\"M\",\"commercialCard\":\"888\",\"commercialCardIndicator\":\"3\",\"financialNetworkCode\":\"777\",\"posData\":\"1025100006600\",\"posEntryMode\":\"812\",\"processingCode\":\"003000\",\"responseCode\":\"00\",\"stan\":\"269195\",\"transactionIdentifier\":\"123456789\"},\"billing\":{\"address\":{\"city\":\"MOUNT LAWLEY\",\"country\":\"AUS\",\"postcodeZip\":\"6050\",\"stateProvince\":\"WA\",\"street\":\"U 1  1 Example St\"}},\"customer\":{\"email\":\"cam@exmple.com\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"device\":{\"browser\":\"Google Chrome or Chromium\",\"ipAddress\":\"123.103.220.210\"},\"gatewayEntryPoint\":\"WEB_SERVICES_API\",\"merchant\":\"TESTDEVMID003\",\"order\":{\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_SUCCESSFUL\",\"chargeback\":{\"amount\":0,\"currency\":\"AUD\"},\"creationTime\":\"2025-09-03T07:03:39.919Z\",\"currency\":\"AUD\",\"id\":\"814fb067-e1b7-45ea-9c8a-ab3a4e5be088\",\"lastUpdatedTime\":\"2025-09-03T07:03:44.012Z\",\"merchantAmount\":1000,\"merchantCategoryCode\":\"5000\",\"merchantCurrency\":\"AUD\",\"reference\":\"0f1240d8-b185-4c6f-92c3-408c45fda6f1\",\"status\":\"CAPTURED\",\"totalAuthorizedAmount\":1000,\"totalCapturedAmount\":1000,\"totalDisbursedAmount\":0,\"totalRefundedAmount\":0},\"response\":{\"acquirerCode\":\"00\",\"acquirerMessage\":\"Approved\",\"cardSecurityCode\":{\"acquirerCode\":\"M\",\"gatewayCode\":\"MATCH\"},\"gatewayCode\":\"APPROVED\",\"gatewayRecommendation\":\"NO_ACTION\"},\"result\":\"SUCCESS\",\"sourceOfFunds\":{\"provided\":{\"card\":{\"brand\":\"MASTERCARD\",\"expiry\":{\"month\":\"1\",\"year\":\"30\"},\"fundingMethod\":\"DEBIT\",\"nameOnCard\":\"3DSecure Test Cards for Frictionless Workflow\",\"number\":\"512345xxxxxx2346\",\"scheme\":\"MASTERCARD\",\"storedOnFile\":\"NOT_STORED\"}},\"type\":\"CARD\"},\"timeOfLastUpdate\":\"2025-09-03T07:03:44.012Z\",\"timeOfRecord\":\"2025-09-03T07:03:43.845Z\",\"transaction\":{\"acquirer\":{\"batch\":20250903,\"date\":\"0903\",\"id\":\"CBA_S2I\",\"merchantId\":\"11111111111111\",\"settlementDate\":\"2025-09-03\",\"timeZone\":\"+1000\",\"transactionId\":\"123456789\"},\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_SUCCESSFUL\",\"authorizationCode\":\"269195\",\"currency\":\"AUD\",\"id\":\"a870a6c2-6912-4aac-b60a-131a81a25be2\",\"receipt\":\"524607269195\",\"source\":\"INTERNET\",\"stan\":\"269195\",\"terminal\":\"111\",\"type\":\"PAYMENT\"},\"version\":\"75\"}",
+                                "format": "json"
+                            }
+                        }
+                    ],
+                    "created_at": "2025-09-03T07:03:42.991Z",
+                    "authorization_code": "269195",
+                    "external_id": "814fb067-e1b7-45ea-9c8a-ab3a4e5be088:a870a6c2-6912-4aac-b60a-131a81a25be2",
+                    "external_reference": "524607269195",
+                    "first_payment": true,
+                    "processed_at": "2025-09-03T07:03:44.256Z"
+                }
+            ],
+            "created_at": "2025-09-03T07:03:38.280Z",
+            "updated_at": "2025-09-03T07:03:44.256Z",
+            "__v": 2,
+            "external_id": "814fb067-e1b7-45ea-9c8a-ab3a4e5be088:a870a6c2-6912-4aac-b60a-131a81a25be2"
+        }
+    }
+}
