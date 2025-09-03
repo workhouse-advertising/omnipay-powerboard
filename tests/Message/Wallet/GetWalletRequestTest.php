@@ -2,7 +2,7 @@
 
 namespace Omnipay\Powerboard\Test\Message\Wallet;
 
-use Omnipay\Powerboard\Message\Wallet\CreateWalletRequest as Request;
+use Omnipay\Powerboard\Message\Wallet\GetWalletRequest as Request;
 use Omnipay\Powerboard\Test\Message\AbstractMessageTestCase;
 
 class GetWalletRequestTest extends AbstractMessageTestCase
@@ -21,14 +21,7 @@ class GetWalletRequestTest extends AbstractMessageTestCase
         $request = $this->getHttpRequest();
         $this->request = new Request($client, $request);
 
-        $this->request->initialize([
-            'amount' => 3298.00,
-            'currency' => 'AUD',
-            'card' => $this->getValidCard(),
-        ]);
-
-        $this->request->setDescription('a description');
-        $this->request->setGatewayId('a gateway ID');
+        $this->request->setChargeId('68b7e84a22423a77c15927c2');
     }
 
     /**
@@ -36,27 +29,7 @@ class GetWalletRequestTest extends AbstractMessageTestCase
      */
     public function testGetData()
     {
-        $expected = [
-            'amount' => (float) $this->request->getAmount(),
-            'reference' => $this->request->getTransactionId(),
-            'description' => $this->request->getDescription(),
-            'currency' => $this->request->getCurrency(),
-            'customer' => [
-                'email' => $this->request->getCard()->getEmail(),
-                'first_name' => $this->request->getCard()->getBillingFirstName(),
-                'last_name' => $this->request->getCard()->getBillingLastName(),
-                'phone' => $this->request->getCard()->getBillingPhone(),
-                'payment_source' => [
-                    'gateway_id' => $this->request->getGatewayId(),
-                    'address_line1' => $this->request->getCard()->getBillingAddress1(),
-                    'address_line2' => $this->request->getCard()->getBillingAddress2(),
-                    'address_city' => $this->request->getCard()->getBillingCity(),
-                    'address_state' => $this->request->getCard()->getBillingState(),
-                    'address_country' => $this->request->getCard()->getBillingCountry(),
-                    'address_postcode' => $this->request->getCard()->getBillingPostcode(),
-                ],
-            ],
-        ];
+        $expected = [];
 
         $this->assertEquals($expected, $this->request->getData());
     }
@@ -79,12 +52,12 @@ class GetWalletRequestTest extends AbstractMessageTestCase
      */
     public function testSendFailure()
     {
-        $this->setMockHttpResponse('CreateWalletFailure.txt');
+        $this->setMockHttpResponse('GetWalletFailure.txt');
 
         $response = $this->request->send();
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('There was an error validating your request so the purchase could not be completed', $response->getMessage());
+        $this->assertSame('A resource could not be found so the purchase could not be completed', $response->getMessage());
     }
 }
