@@ -127,4 +127,21 @@ trait GatewayParameters
     {
         return $this->setParameter('configurationTemplateId', $value);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getVersion()
+    {
+        return $this->getParameter('version');
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function setVersion($value)
+    {
+        return $this->setParameter('version', $value);
+    }
 }
