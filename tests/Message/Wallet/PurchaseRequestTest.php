@@ -60,6 +60,6 @@ class PurchaseRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('The payment could not be processed because a resource could not be found', $response->getMessage());
+        $this->assertSame('A resource could not be found so the purchase could not be completed', $response->getMessage());
     }
 }

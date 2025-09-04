@@ -14,9 +14,6 @@ class CreateIntentRequest extends AbstractCheckoutRequest
         $this->validate(
             'amount',
             'currency',
-            'version',
-            'customisationTemplateId',
-            'configurationTemplateId',
         );
 
         $data = [
@@ -41,7 +38,7 @@ class CreateIntentRequest extends AbstractCheckoutRequest
                 ],
             ],
             'amount' => (float) $this->getAmount(),
-            'version' => 1, // TODO: Consider allowing this to be configurable.
+            'version' => (int) $this->getVersion(),
             'currency' => $this->getCurrency(),
             'reference' => $this->getTransactionId(),
         ];

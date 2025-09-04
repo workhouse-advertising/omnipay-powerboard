@@ -29,6 +29,7 @@ class CreateIntentRequestTest extends AbstractMessageTestCase
 
         $this->request->setCustomisationTemplateId('a customisation template id');
         $this->request->setConfigurationTemplateId('a configuration template id');
+        $this->request->setVersion(123);
     }
 
     /**
@@ -58,7 +59,7 @@ class CreateIntentRequestTest extends AbstractMessageTestCase
                 ],
             ],
             'amount' => (float) $this->request->getAmount(),
-            'version' => 1,
+            'version' => 123,
             'currency' => $this->request->getCurrency(),
             'reference' => $this->request->getTransactionId(),
         ];
@@ -90,6 +91,6 @@ class CreateIntentRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('There was an error validating your request', $response->getMessage());
+        $this->assertSame('There was an error validating your request so the purchase could not be completed', $response->getMessage());
     }
 }

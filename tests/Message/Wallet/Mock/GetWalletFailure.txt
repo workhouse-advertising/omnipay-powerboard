@@ -1,0 +1,27 @@
+HTTP/1.1 404 Not Found
+Date: Wed, 03 Sep 2025 08:02:32 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 214
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-monitoring-acl-permission: charges:get
+x-monitoring-acl-company-id: 677efbdee4411a5bd12d54a7
+x-monitoring-acl-brand-id: 66504a25689973cb3240d6c5
+x-monitoring-acl-global-id: 000000000000000000000001
+x-monitoring-acl-ip: 123.103.220.210
+x-monitoring-acl-scope: company
+x-monitoring-acl-scope-id: 677efbdee4411a5bd12d54a7
+x-monitoring-error-summary-message: Not%20found
+x-monitoring-error-summary-code: NotFound
+x-monitoring-error-summary-gateway-specific-code: undefined
+x-monitoring-error-summary-gateway-specific-description: undefined
+x-monitoring-error-hard: undefined
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: 02a2e6fa-d6e9-4e67-b3c4-65067ec3d1ad
+etag: W/"81-5AbXQ5zLbZRkNl2kk3YpGKk2vkw"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"status":404,"error":{"message":"Not found","code":"NotFound","details":{"path":"","messages":[]}},"resource":{"type":"charge"},"error_summary":{"message":"Not found","code":"not_found","details":{"messages":[]}}}
