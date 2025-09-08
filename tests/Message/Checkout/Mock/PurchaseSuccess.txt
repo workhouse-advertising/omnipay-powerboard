@@ -1,0 +1,200 @@
+HTTP/1.1 200 OK
+Date: Mon, 08 Sep 2025 02:20:46 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 5155
+Connection: keep-alive
+x-powered-by: PayDock <paydock.com>
+access-control-allow-origin: *
+vary: Origin
+x-external-duration: 0
+x-retry-delay: 0
+x-correlation-id: f227835c-4eac-49cb-b6e4-691f8a9902a3
+etag: W/"1423-vXeZoZ4K5pDg87cYlDok5ww+5cQ"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+  "status": 200,
+  "error": null,
+  "resource": {
+    "type": "checkout",
+    "data": {
+      "_id": "68be3d2b7871c79eefad13c6",
+      "version": 1,
+      "status": "completed",
+      "reason": null,
+      "amount": 1000,
+      "currency": "AUD",
+      "reference": "88b69729-3050-44e1-81b0-cf37101a4eb9",
+      "journey": [
+        {
+          "sense": "info",
+          "title": "CheckoutFlow created",
+          "message": "Checkout process created ....",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": null,
+          "_id": "68be3d2b4835d5ab2ed7c901",
+          "created_at": "2025-09-08T02:19:23.495Z",
+          "updatedAt": "2025-09-08T02:19:23.495Z"
+        },
+        {
+          "sense": "info",
+          "title": "Widget initialized",
+          "message": "The widget has been initialised and displayed",
+          "thread": "main",
+          "context": "{\"platform\":\"web\",\"sdk_urls\":{\"recommended\":\"https://widget.preproduction.powerboard.commbank.com.au/sdk/v1.127.0/widget.umd.min.js\",\"used\":\"v1.127.0\"}}",
+          "paymentFlow_id": null,
+          "_id": "68be3d544835d5ab2ed7c90d",
+          "created_at": "2025-09-08T02:20:04.974Z",
+          "updatedAt": "2025-09-08T02:20:04.974Z"
+        },
+        {
+          "sense": "info",
+          "title": "Payment methods shown",
+          "message": "Payment methods are shown and awaiting selection",
+          "thread": "main",
+          "context": "{\"payment_methods\":[\"card\"]}",
+          "paymentFlow_id": null,
+          "_id": "68be3d554835d5ab2ed7c913",
+          "created_at": "2025-09-08T02:20:05.196Z",
+          "updatedAt": "2025-09-08T02:20:05.196Z"
+        },
+        {
+          "sense": "success",
+          "title": "Payment method selected",
+          "message": "Payment method has been selected",
+          "thread": "main",
+          "context": "{\"payment_method\":\"card\"}",
+          "paymentFlow_id": null,
+          "_id": "68be3d574835d5ab2ed7c919",
+          "created_at": "2025-09-08T02:20:07.212Z",
+          "updatedAt": "2025-09-08T02:20:07.212Z"
+        },
+        {
+          "sense": "info",
+          "title": "v1_card_guest_direct_capture_gw_3ds initialised",
+          "message": "v1_card_guest_direct_capture_gw_3ds initialised",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": null,
+          "_id": "68be3d574835d5ab2ed7c92a",
+          "created_at": "2025-09-08T02:20:07.359Z",
+          "updatedAt": "2025-09-08T02:20:07.359Z"
+        },
+        {
+          "sense": "info",
+          "title": "Card With 3ds paymentFlow started",
+          "message": "v1_card_guest_direct_capture_gw_3ds paymentFlow started",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d574835d5ab2ed7c933",
+          "created_at": "2025-09-08T02:20:07.431Z",
+          "updatedAt": "2025-09-08T02:20:07.431Z"
+        },
+        {
+          "sense": "info",
+          "title": "Card form shown",
+          "message": "The card data entry form has been shown and is awaiting input.",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d574835d5ab2ed7c93f",
+          "created_at": "2025-09-08T02:20:07.686Z",
+          "updatedAt": "2025-09-08T02:20:07.686Z"
+        },
+        {
+          "sense": "success",
+          "title": "Card accepted",
+          "message": "Card accepted and tokenized",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d6b4835d5ab2ed7c94a",
+          "created_at": "2025-09-08T02:20:27.373Z",
+          "updatedAt": "2025-09-08T02:20:27.373Z"
+        },
+        {
+          "sense": "success",
+          "title": "Session vault created",
+          "message": "The card OTT token has been exchanged with a session vault",
+          "thread": "main",
+          "context": "{\"vault_token\":\"c5c5d54a-2f34-4334-94a2-0ea689bc91ec\"}",
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d6b4835d5ab2ed7c958",
+          "created_at": "2025-09-08T02:20:27.813Z",
+          "updatedAt": "2025-09-08T02:20:27.813Z"
+        },
+        {
+          "sense": "success",
+          "title": "Check pre auth status",
+          "message": "Check pre auth status",
+          "thread": "main",
+          "context": "{\"id\":\"68be3d6c14d242644e9cdaa0\"}",
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d6e4835d5ab2ed7c967",
+          "created_at": "2025-09-08T02:20:30.407Z",
+          "updatedAt": "2025-09-08T02:20:30.407Z"
+        },
+        {
+          "sense": "success",
+          "title": "3ds pre-auth created",
+          "message": "\"The 3ds pre auth created successfully\"",
+          "thread": "main",
+          "context": "{\"tdsId\":\"866371e8-fec0-4165-b693-5f505a5eee65\"}",
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d6e4835d5ab2ed7c977",
+          "created_at": "2025-09-08T02:20:30.657Z",
+          "updatedAt": "2025-09-08T02:20:30.657Z"
+        },
+        {
+          "sense": "info",
+          "title": "3ds pre-auth form completed",
+          "message": "3ds pre-auth form completed",
+          "thread": "main",
+          "context": "{\"status\":\"success\",\"message\":\"The authentication was successful\"}",
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d704835d5ab2ed7c98a",
+          "created_at": "2025-09-08T02:20:32.441Z",
+          "updatedAt": "2025-09-08T02:20:32.441Z"
+        },
+        {
+          "sense": "success",
+          "title": "Charge created",
+          "message": "Charge created successfully",
+          "thread": "main",
+          "context": "{\"charge_id\":\"68be3d6c14d242644e9cdaa0\"}",
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d724835d5ab2ed7c99e",
+          "created_at": "2025-09-08T02:20:34.368Z",
+          "updatedAt": "2025-09-08T02:20:34.368Z"
+        },
+        {
+          "sense": "success",
+          "title": "Transaction successful",
+          "message": "Your payment has been successfully processed",
+          "thread": "main",
+          "context": "{\"charge_id\":\"68be3d6c14d242644e9cdaa0\",\"intent_id\":\"68be3d2b7871c79eefad13c6\"}",
+          "paymentFlow_id": "68be3d574835d5ab2ed7c921",
+          "_id": "68be3d724835d5ab2ed7c9b5",
+          "created_at": "2025-09-08T02:20:34.762Z",
+          "updatedAt": "2025-09-08T02:20:34.762Z"
+        },
+        {
+          "sense": "success",
+          "title": "Checkout Completed",
+          "message": "Checkout Completed",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": null,
+          "_id": "68be3d724835d5ab2ed7c9dc",
+          "created_at": "2025-09-08T02:20:34.946Z",
+          "updatedAt": "2025-09-08T02:20:34.946Z"
+        }
+      ],
+      "created_at": "2025-09-08T02:19:23.319Z",
+      "updated_at": "2025-09-08T02:20:35.017Z",
+      "process_reference": "68be3d6c14d242644e9cdaa0"
+    }
+  }
+}

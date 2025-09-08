@@ -9,28 +9,51 @@ use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 abstract class AbstractResponse extends BaseAbstractResponse implements RedirectResponseInterface
 {
+    public const ERROR_UNFULFILLED_CONDITION = 'unfulfilled_condition';
+    public const ERROR_UNSPECIFIED_ERROR = 'unspecified_error';
+    public const ERROR_VALIDATION_ERROR = 'validation_error';
+    public const ERROR_NOT_FOUND = 'not_found';
+    public const ERROR_REQUIRED_ERROR = 'required_error';
+    public const ERROR_GATEWAY_ERROR = 'gateway_error';
+    public const ERROR_INSUFFICIENT_FUNDS = 'insufficient_funds';
+    public const ERROR_CREDIT_CARD_INVALID_OR_EXPIRED = 'credit_card_invalid_or_expired';
+    public const ERROR_TRANSACTION_DECLINED = 'transaction_declined';
+    public const ERROR_TRANSACTION_DECLINED_HARD = 'transaction_declined_hard';
+    public const ERROR_SYSTEM_ERROR = 'system_error';
+    public const ERROR_FRAUD_WARNING = 'fraud_warning';
+    public const ERROR_INVALID_TRANSACTION_DETAILS = 'invalid_transaction_details';
+    public const ERROR_INVALID_REQUEST_DETAILS = 'invalid_request_details';
+    public const ERROR_INVALID_BANK_ACCOUNT_DETAILS = 'invalid_bank_account_details';
+    public const ERROR_INVALID_GATEWAY_CREDENTIALS = 'invalid_gateway_credentials';
+    public const ERROR_UNKNOWN = 'unknown';
+
     /**
      * @var array
      */
-    protected $errorCodeMessages = [
-        'unfulfilled_condition' => 'There was an unfulfilled condition so the purchase could not be completed',
-        'unspecified_error' => 'An unspecified error occurred so the purchase could not be completed',
-        'validation_error' => 'There was an error validating your request so the purchase could not be completed',
-        'not_found' => 'A resource could not be found so the purchase could not be completed',
-        'required_error' => 'A required item was not provided so the purchase could not be completed',
-        'gateway_error' => 'There was a problem with the payment gateway so the purchase could not be completed',
-        'insufficient_funds' => 'There was a problem with the payment source so the purchase could not be completed',
-        'credit_card_invalid_or_expired' => 'There is a problem with the card so the purchase could not be completed',
-        'transaction_declined' => 'The transaction did not proceed so the purchase could not be completed',
-        'transaction_declined_hard' => 'There was a problem with the transaction so the purchase could not be completed',
-        'system_error' => 'There was a problem with the payment system so the purchase could not be completed',
-        'fraud_warning' => 'The attempt was flagged with a problem so the purchase could not be completed',
-        'invalid_transaction_details' => 'The transaction is invlalid so the purchase could not be completed',
-        'invalid_request_details' => 'The request is invlalid so the purchase could not be completed',
-        'invalid_bank_account_details' => 'The details are invlalid so the purchase could not be completed',
-        'invalid_gateway_credentials' => 'The payment gateway had a problem so the purchase could not be completed',
-        'unknown' => 'An unknown error occurred so the purchase could not be completed',
+    protected static $errorCodeMessages = [
+        self::ERROR_UNFULFILLED_CONDITION => 'There was an unfulfilled condition so the purchase could not be completed',
+        self::ERROR_UNSPECIFIED_ERROR => 'An unspecified error occurred so the purchase could not be completed',
+        self::ERROR_VALIDATION_ERROR => 'There was an error validating your request so the purchase could not be completed',
+        self::ERROR_NOT_FOUND => 'A resource could not be found so the purchase could not be completed',
+        self::ERROR_REQUIRED_ERROR => 'A required item was not provided so the purchase could not be completed',
+        self::ERROR_GATEWAY_ERROR => 'There was a problem with the payment gateway so the purchase could not be completed',
+        self::ERROR_INSUFFICIENT_FUNDS => 'There was a problem with the payment source so the purchase could not be completed',
+        self::ERROR_CREDIT_CARD_INVALID_OR_EXPIRED => 'There is a problem with the card so the purchase could not be completed',
+        self::ERROR_TRANSACTION_DECLINED => 'The transaction did not proceed so the purchase could not be completed',
+        self::ERROR_TRANSACTION_DECLINED_HARD => 'There was a problem with the transaction so the purchase could not be completed',
+        self::ERROR_SYSTEM_ERROR => 'There was a problem with the payment system so the purchase could not be completed',
+        self::ERROR_FRAUD_WARNING => 'The attempt was flagged with a problem so the purchase could not be completed',
+        self::ERROR_INVALID_TRANSACTION_DETAILS => 'The transaction is invlalid so the purchase could not be completed',
+        self::ERROR_INVALID_REQUEST_DETAILS => 'The request is invlalid so the purchase could not be completed',
+        self::ERROR_INVALID_BANK_ACCOUNT_DETAILS => 'The details are invlalid so the purchase could not be completed',
+        self::ERROR_INVALID_GATEWAY_CREDENTIALS => 'The payment gateway had a problem so the purchase could not be completed',
+        self::ERROR_UNKNOWN => 'An unknown error occurred so the purchase could not be completed',
     ];
+
+    public static function setErrorMessages(array $mappedErrorMessages)
+    {
+        self::$errorCodeMessages = array_merge(self::$errorCodeMessages, $mappedErrorMessages);
+    }
 
     /**
      * @return mixed
@@ -54,6 +77,6 @@ abstract class AbstractResponse extends BaseAbstractResponse implements Redirect
     public function getMessage()
     {
         $errorCode = $this->getErrorCode();
-        return $errorCode ? ($this->errorCodeMessages[$errorCode] ?? null) : null;
+        return $errorCode ? (self::$errorCodeMessages[$errorCode] ?? null) : null;
     }
 }

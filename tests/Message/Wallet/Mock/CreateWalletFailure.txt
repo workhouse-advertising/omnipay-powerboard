@@ -24,4 +24,37 @@ x-correlation-id: 02886312-66df-43b1-907d-57c499be50c2
 etag: W/"142-d1UEq/CuSlQO+EB4opG6U1GuKrY"
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-{"status":400,"error":{"message":"body validation failed","code":"ValidationError","details":{"path":"amount","messages":["amount must be less than 99999999999999","amount must be greater than 0.001","amount must be a positive number","amount should not be empty","amount must be a number"]}},"resource":{"type":"charge"},"error_summary":{"message":"body validation failed","code":"validation_error","details":{"path":"amount","messages":["amount must be less than 99999999999999","amount must be greater than 0.001","amount must be a positive number","amount should not be empty","amount must be a number"]}}}
+{
+  "status": 400,
+  "error": {
+    "message": "body validation failed",
+    "code": "ValidationError",
+    "details": {
+      "path": "amount",
+      "messages": [
+        "amount must be less than 99999999999999",
+        "amount must be greater than 0.001",
+        "amount must be a positive number",
+        "amount should not be empty",
+        "amount must be a number"
+      ]
+    }
+  },
+  "resource": {
+    "type": "charge"
+  },
+  "error_summary": {
+    "message": "body validation failed",
+    "code": "validation_error",
+    "details": {
+      "path": "amount",
+      "messages": [
+        "amount must be less than 99999999999999",
+        "amount must be greater than 0.001",
+        "amount must be a positive number",
+        "amount should not be empty",
+        "amount must be a number"
+      ]
+    }
+  }
+}

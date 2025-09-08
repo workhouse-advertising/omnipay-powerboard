@@ -1,15 +1,15 @@
 HTTP/1.1 400 Bad Request
-Date: Thu, 28 Aug 2025 06:39:26 GMT
+Date: Mon, 08 Sep 2025 02:31:19 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 493
+Content-Length: 285
 Connection: keep-alive
 x-powered-by: PayDock <paydock.com>
 access-control-allow-origin: *
 vary: Origin
 x-external-duration: 0
 x-retry-delay: 0
-x-correlation-id: e5062624-8af4-4991-b66c-292eeabcf740
-etag: W/"10e-+wvD3J3lFsjwwnNs5bQq8AQ2T5U"
+x-correlation-id: 17f977a4-138a-450a-bc8c-c43a19b8c83c
+etag: W/"a6-HFxLBBB5XlbRTxOlTQVx7eH8W8Y"
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 {
@@ -20,9 +20,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
     "details": {
       "path": "",
       "messages": [
-        "amount should not be empty",
-        "amount must be a number conforming to the specified constraints",
-        "amount must be a positive number"
+        "id must be a mongodb id"
       ]
     }
   },
@@ -34,9 +32,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
     "code": "validation_error",
     "details": {
       "messages": [
-        "amount should not be empty",
-        "amount must be a number conforming to the specified constraints",
-        "amount must be a positive number"
+        "id must be a mongodb id"
       ]
     }
   }

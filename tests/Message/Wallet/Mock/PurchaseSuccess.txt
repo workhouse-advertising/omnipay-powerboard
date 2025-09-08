@@ -27,4 +27,92 @@ x-correlation-id: 06b63643-d542-4602-99b2-324864d9463d
 etag: W/"16f8-9OTqXY/nsSA7ZOql6mvD71ExE9k"
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-{"status":200,"error":null,"resource":{"type":"charge","data":{"_id":"68b00b9d22423a77c1576739","logs_migrated":false,"transfer":{"items":[]},"schedule":{"stopped":false},"statistics":{"total_refunded_amount":0,"full_refund":false,"need_sync":true},"amount":1000,"currency":"AUD","status":"complete","type":"financial","company_id":"677efbdee4411a5bd12d54a7","capture":true,"authorization":false,"customer":{"first_name":"First","last_name":"Last","email":"cameron@workhouse.au","payment_source":{"type":"wallet","wallet_type":"google","ref_token":"{\"signature\":\"MEYCIQCJq88bfqcJnEJ8T8heSmwcij/W4GIt4Wc3OprpN1IcVwIhAJvxcgewdVH9aLv1uIFDlqlN+vwuq8R1HdVurfHrQyFI\",\"intermediateSigningKey\":{\"signedKey\":\"{\\\"keyValue\\\":\\\"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOD/X9im+zZlweDlEShxIdP8b8zi1EM5mglddUH9fPYfnt3GRfVvPumxnbgQmcKun8ty90jqNPqij7fjqqJ44aQ\\\\u003d\\\\u003d\\\",\\\"keyExpiration\\\":\\\"1757029263293\\\"}\",\"signatures\":[\"MEUCIQCTPGUy5/to+RawFS3MH7MVGRjxzJqWM6vI0CDhwTT2nAIgFMcSmgKGfenll0qMKnU3p3PpDDzdvAoBududDQTmzps\\u003d\"]},\"protocolVersion\":\"ECv2\",\"signedMessage\":\"{\\\"encryptedMessage\\\":\\\"YinqjNjESOYQGCJqCfVgJMjS4OrVmjXOaifNuVkPClZE3zUEpHePN6+Kj1vaz5TVslOSHO+ITyIb2mUy9jfQthhkxZ5Jiy3NppGIBvJbdLH1N9s+6AhOJLePL5RWngkAEzaZ6NswqYujPglDTWWtGAmDG1r1amiFixBHHbNDhxZJYh7vyPpYQ+TDvoKGqpK3lzQN4SfIJpLv2IXfEMBP20yM3xwbHMxZ/mr7KbcdXu6N4faYiLJ5JQfYt3lsPmZgOJ+jprlcHcxeQrszdwtcKxLoM0ijqGtUiTuQYyCQfi5uR49Wv7hqVtZu8BrX3qrmny9wHEnj2+AWUJFaD1E+3q5GaWBeOy7T0dy8BjaCIfT7lh1IPcPquu63GN29ckdqndUTMIN1BNm0eKJFav9KJwY6pZuiiirsq0Ry2VzOxTZhWR4j6MO2gj1UvPLRjGHQNLRRo3hXhAzv5Sbbk1uifRDR3YD7ZAHymb+5IV6hyo9r7jZeGVsrlSOedu+j+o+b8zVZHI8yihm0WluWRU2FTpWZD8gpt3KciYhKQ0G37fFF\\\",\\\"ephemeralPublicKey\\\":\\\"BPMqi4zCoVbu5p5KigY9j96NhXmRn1xOzvyD1er1NNScnpUpXDalHk2Yx53cBB+dyCYY/nw9v+WttfTePnqH+2I\\\\u003d\\\",\\\"tag\\\":\\\"vnrrCRk3dqQ5YW7L/da30FgXz31AuctsiBhy3FYuzKg\\\\u003d\\\"}\"}","card_number_last4":"1111","card_number_bin":"41111111","card_number_length":16,"card_scheme":"VISA","expire_month":12,"expire_year":2027,"gateway_id":"677f1727cf73ceed6dde9e44","gateway_type":"MasterCard","gateway_name":"MasterCard","items":[]}},"archived":false,"description":"BED-000000061","one_off":true,"reference":"da4da9ea-f3da-4ecb-9f6c-5249e2e84c94","_source_ip_address":"123.103.220.210","items":[],"transactions":[{"type":"sale","status":"complete","amount":1000,"currency":"AUD","transaction_id":null,"_source_ip_address":"123.103.220.210","_id":"68b012c2f70110ade6f1ee92","service_logs":[{"req":{"body":"{\"apiOperation\":\"PAY\",\"order\":{\"reference\":\"da4da9ea-f3da-4ecb-9f6c-5249e2e84c94\",\"amount\":1000,\"currency\":\"AUD\",\"walletProvider\":\"GOOGLE_PAY\",\"description\":\"BED-000000061\"},\"sourceOfFunds\":{\"type\":\"CARD\",\"provided\":{\"card\":{\"expiry\":{\"month\":\"**\",\"year\":\"**\"},\"number\":\"************1111\",\"devicePayment\":{}}}},\"customer\":{\"email\":\"cameron@workhouse.au\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"billing\":{\"address\":{}},\"shipping\":{\"address\":{},\"contact\":{}},\"device\":{},\"transaction\":{\"source\":\"INTERNET\"}}","format":"json"},"response_body":{"body":"{\"authorizationResponse\":{\"cardLevelIndicator\":\"88\",\"commercialCard\":\"888\",\"commercialCardIndicator\":\"3\",\"marketSpecificData\":\"8\",\"posData\":\"1025100006600\",\"posEntryMode\":\"812\",\"processingCode\":\"003000\",\"responseCode\":\"00\",\"returnAci\":\"8\",\"stan\":\"155693\",\"transactionIdentifier\":\"123456789012345\",\"validationCode\":\"6789\"},\"customer\":{\"email\":\"cameron@workhouse.au\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"gatewayEntryPoint\":\"WEB_SERVICES_API\",\"merchant\":\"TESTDEVMID003\",\"order\":{\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_NOT_IN_EFFECT\",\"chargeback\":{\"amount\":0,\"currency\":\"AUD\"},\"creationTime\":\"2025-08-28T08:26:46.600Z\",\"currency\":\"AUD\",\"description\":\"BED-000000061\",\"id\":\"5c27ec95-4f0c-449b-8dcb-2b9f5cf70a38\",\"lastUpdatedTime\":\"2025-08-28T08:26:46.760Z\",\"merchantAmount\":1000,\"merchantCategoryCode\":\"5000\",\"merchantCurrency\":\"AUD\",\"reference\":\"da4da9ea-f3da-4ecb-9f6c-5249e2e84c94\",\"status\":\"CAPTURED\",\"totalAuthorizedAmount\":1000,\"totalCapturedAmount\":1000,\"totalDisbursedAmount\":0,\"totalRefundedAmount\":0,\"walletProvider\":\"GOOGLE_PAY\"},\"response\":{\"acquirerCode\":\"00\",\"acquirerMessage\":\"Approved\",\"gatewayCode\":\"APPROVED\",\"gatewayRecommendation\":\"NO_ACTION\"},\"result\":\"SUCCESS\",\"sourceOfFunds\":{\"provided\":{\"card\":{\"brand\":\"VISA\",\"expiry\":{\"month\":\"12\",\"year\":\"27\"},\"fundingMethod\":\"DEBIT\",\"number\":\"411111xxxxxx1111\",\"scheme\":\"VISA\",\"storedOnFile\":\"NOT_STORED\"}},\"type\":\"CARD\"},\"timeOfLastUpdate\":\"2025-08-28T08:26:46.760Z\",\"timeOfRecord\":\"2025-08-28T08:26:46.621Z\",\"transaction\":{\"acquirer\":{\"batch\":20250828,\"date\":\"0828\",\"id\":\"CBA_S2I\",\"merchantId\":\"11111111111111\",\"settlementDate\":\"2025-08-28\",\"timeZone\":\"+1000\",\"transactionId\":\"123456789012345\"},\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_NOT_IN_EFFECT\",\"authorizationCode\":\"155693\",\"currency\":\"AUD\",\"id\":\"13312cd2-851d-4c57-adc9-ee7ddbc1222e\",\"receipt\":\"524008155693\",\"source\":\"INTERNET\",\"stan\":\"155693\",\"terminal\":\"111\",\"type\":\"PAYMENT\"},\"version\":\"75\"}","format":"json"}}],"created_at":"2025-08-28T08:26:42.215Z","updated_at":"2025-08-28T08:26:46.976Z","external_id":"5c27ec95-4f0c-449b-8dcb-2b9f5cf70a38:13312cd2-851d-4c57-adc9-ee7ddbc1222e","external_reference":"524008155693","processed_at":"2025-08-28T08:26:46.976Z","status_code":"approved"}],"created_at":"2025-08-28T07:56:13.805Z","updated_at":"2025-08-28T08:26:46.995Z","__v":1,"token_id":"68b00b9d2cdc21e8ddbbfd62","external_id":"5c27ec95-4f0c-449b-8dcb-2b9f5cf70a38:13312cd2-851d-4c57-adc9-ee7ddbc1222e"}}}
+{
+  "status": 200,
+  "error": null,
+  "resource": {
+    "type": "charge",
+    "data": {
+      "_id": "68b00b9d22423a77c1576739",
+      "logs_migrated": false,
+      "transfer": {
+        "items": []
+      },
+      "schedule": {
+        "stopped": false
+      },
+      "statistics": {
+        "total_refunded_amount": 0,
+        "full_refund": false,
+        "need_sync": true
+      },
+      "amount": 1000,
+      "currency": "AUD",
+      "status": "complete",
+      "type": "financial",
+      "company_id": "677efbdee4411a5bd12d54a7",
+      "capture": true,
+      "authorization": false,
+      "customer": {
+        "first_name": "First",
+        "last_name": "Last",
+        "email": "cam@exmple.com",
+        "payment_source": {
+          "type": "wallet",
+          "wallet_type": "google",
+          "ref_token": "{\"signature\":\"MEYCIQCJq88bfqcJnEJ8T8heSmwcij/W4GIt4Wc3OprpN1IcVwIhAJvxcgewdVH9aLv1uIFDlqlN+vwuq8R1HdVurfHrQyFI\",\"intermediateSigningKey\":{\"signedKey\":\"{\\\"keyValue\\\":\\\"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEOD/X9im+zZlweDlEShxIdP8b8zi1EM5mglddUH9fPYfnt3GRfVvPumxnbgQmcKun8ty90jqNPqij7fjqqJ44aQ\\\\u003d\\\\u003d\\\",\\\"keyExpiration\\\":\\\"1757029263293\\\"}\",\"signatures\":[\"MEUCIQCTPGUy5/to+RawFS3MH7MVGRjxzJqWM6vI0CDhwTT2nAIgFMcSmgKGfenll0qMKnU3p3PpDDzdvAoBududDQTmzps\\u003d\"]},\"protocolVersion\":\"ECv2\",\"signedMessage\":\"{\\\"encryptedMessage\\\":\\\"YinqjNjESOYQGCJqCfVgJMjS4OrVmjXOaifNuVkPClZE3zUEpHePN6+Kj1vaz5TVslOSHO+ITyIb2mUy9jfQthhkxZ5Jiy3NppGIBvJbdLH1N9s+6AhOJLePL5RWngkAEzaZ6NswqYujPglDTWWtGAmDG1r1amiFixBHHbNDhxZJYh7vyPpYQ+TDvoKGqpK3lzQN4SfIJpLv2IXfEMBP20yM3xwbHMxZ/mr7KbcdXu6N4faYiLJ5JQfYt3lsPmZgOJ+jprlcHcxeQrszdwtcKxLoM0ijqGtUiTuQYyCQfi5uR49Wv7hqVtZu8BrX3qrmny9wHEnj2+AWUJFaD1E+3q5GaWBeOy7T0dy8BjaCIfT7lh1IPcPquu63GN29ckdqndUTMIN1BNm0eKJFav9KJwY6pZuiiirsq0Ry2VzOxTZhWR4j6MO2gj1UvPLRjGHQNLRRo3hXhAzv5Sbbk1uifRDR3YD7ZAHymb+5IV6hyo9r7jZeGVsrlSOedu+j+o+b8zVZHI8yihm0WluWRU2FTpWZD8gpt3KciYhKQ0G37fFF\\\",\\\"ephemeralPublicKey\\\":\\\"BPMqi4zCoVbu5p5KigY9j96NhXmRn1xOzvyD1er1NNScnpUpXDalHk2Yx53cBB+dyCYY/nw9v+WttfTePnqH+2I\\\\u003d\\\",\\\"tag\\\":\\\"vnrrCRk3dqQ5YW7L/da30FgXz31AuctsiBhy3FYuzKg\\\\u003d\\\"}\"}",
+          "card_number_last4": "1111",
+          "card_number_bin": "41111111",
+          "card_number_length": 16,
+          "card_scheme": "VISA",
+          "expire_month": 12,
+          "expire_year": 2027,
+          "gateway_id": "677f1727cf73ceed6dde9e44",
+          "gateway_type": "MasterCard",
+          "gateway_name": "MasterCard",
+          "items": []
+        }
+      },
+      "archived": false,
+      "description": "BED-000000061",
+      "one_off": true,
+      "reference": "da4da9ea-f3da-4ecb-9f6c-5249e2e84c94",
+      "_source_ip_address": "123.103.220.210",
+      "items": [],
+      "transactions": [
+        {
+          "type": "sale",
+          "status": "complete",
+          "amount": 1000,
+          "currency": "AUD",
+          "transaction_id": null,
+          "_source_ip_address": "123.103.220.210",
+          "_id": "68b012c2f70110ade6f1ee92",
+          "service_logs": [
+            {
+              "req": {
+                "body": "{\"apiOperation\":\"PAY\",\"order\":{\"reference\":\"da4da9ea-f3da-4ecb-9f6c-5249e2e84c94\",\"amount\":1000,\"currency\":\"AUD\",\"walletProvider\":\"GOOGLE_PAY\",\"description\":\"BED-000000061\"},\"sourceOfFunds\":{\"type\":\"CARD\",\"provided\":{\"card\":{\"expiry\":{\"month\":\"**\",\"year\":\"**\"},\"number\":\"************1111\",\"devicePayment\":{}}}},\"customer\":{\"email\":\"cam@exmple.com\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"billing\":{\"address\":{}},\"shipping\":{\"address\":{},\"contact\":{}},\"device\":{},\"transaction\":{\"source\":\"INTERNET\"}}",
+                "format": "json"
+              },
+              "response_body": {
+                "body": "{\"authorizationResponse\":{\"cardLevelIndicator\":\"88\",\"commercialCard\":\"888\",\"commercialCardIndicator\":\"3\",\"marketSpecificData\":\"8\",\"posData\":\"1025100006600\",\"posEntryMode\":\"812\",\"processingCode\":\"003000\",\"responseCode\":\"00\",\"returnAci\":\"8\",\"stan\":\"155693\",\"transactionIdentifier\":\"123456789012345\",\"validationCode\":\"6789\"},\"customer\":{\"email\":\"cam@exmple.com\",\"firstName\":\"First\",\"lastName\":\"Last\"},\"gatewayEntryPoint\":\"WEB_SERVICES_API\",\"merchant\":\"TESTDEVMID003\",\"order\":{\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_NOT_IN_EFFECT\",\"chargeback\":{\"amount\":0,\"currency\":\"AUD\"},\"creationTime\":\"2025-08-28T08:26:46.600Z\",\"currency\":\"AUD\",\"description\":\"BED-000000061\",\"id\":\"5c27ec95-4f0c-449b-8dcb-2b9f5cf70a38\",\"lastUpdatedTime\":\"2025-08-28T08:26:46.760Z\",\"merchantAmount\":1000,\"merchantCategoryCode\":\"5000\",\"merchantCurrency\":\"AUD\",\"reference\":\"da4da9ea-f3da-4ecb-9f6c-5249e2e84c94\",\"status\":\"CAPTURED\",\"totalAuthorizedAmount\":1000,\"totalCapturedAmount\":1000,\"totalDisbursedAmount\":0,\"totalRefundedAmount\":0,\"walletProvider\":\"GOOGLE_PAY\"},\"response\":{\"acquirerCode\":\"00\",\"acquirerMessage\":\"Approved\",\"gatewayCode\":\"APPROVED\",\"gatewayRecommendation\":\"NO_ACTION\"},\"result\":\"SUCCESS\",\"sourceOfFunds\":{\"provided\":{\"card\":{\"brand\":\"VISA\",\"expiry\":{\"month\":\"12\",\"year\":\"27\"},\"fundingMethod\":\"DEBIT\",\"number\":\"411111xxxxxx1111\",\"scheme\":\"VISA\",\"storedOnFile\":\"NOT_STORED\"}},\"type\":\"CARD\"},\"timeOfLastUpdate\":\"2025-08-28T08:26:46.760Z\",\"timeOfRecord\":\"2025-08-28T08:26:46.621Z\",\"transaction\":{\"acquirer\":{\"batch\":20250828,\"date\":\"0828\",\"id\":\"CBA_S2I\",\"merchantId\":\"11111111111111\",\"settlementDate\":\"2025-08-28\",\"timeZone\":\"+1000\",\"transactionId\":\"123456789012345\"},\"amount\":1000,\"authenticationStatus\":\"AUTHENTICATION_NOT_IN_EFFECT\",\"authorizationCode\":\"155693\",\"currency\":\"AUD\",\"id\":\"13312cd2-851d-4c57-adc9-ee7ddbc1222e\",\"receipt\":\"524008155693\",\"source\":\"INTERNET\",\"stan\":\"155693\",\"terminal\":\"111\",\"type\":\"PAYMENT\"},\"version\":\"75\"}",
+                "format": "json"
+              }
+            }
+          ],
+          "created_at": "2025-08-28T08:26:42.215Z",
+          "updated_at": "2025-08-28T08:26:46.976Z",
+          "external_id": "5c27ec95-4f0c-449b-8dcb-2b9f5cf70a38:13312cd2-851d-4c57-adc9-ee7ddbc1222e",
+          "external_reference": "524008155693",
+          "processed_at": "2025-08-28T08:26:46.976Z",
+          "status_code": "approved"
+        }
+      ],
+      "created_at": "2025-08-28T07:56:13.805Z",
+      "updated_at": "2025-08-28T08:26:46.995Z",
+      "__v": 1,
+      "token_id": "68b00b9d2cdc21e8ddbbfd62",
+      "external_id": "5c27ec95-4f0c-449b-8dcb-2b9f5cf70a38:13312cd2-851d-4c57-adc9-ee7ddbc1222e"
+    }
+  }
+}
