@@ -14,8 +14,6 @@ class PurchaseRequest extends AbstractCheckoutRequest
     public function getData()
     {
         $this->validate(
-            'amount',
-            'currency',
             'intentId',
         );
 

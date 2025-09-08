@@ -24,4 +24,24 @@ x-correlation-id: 76e90229-547a-4e34-a802-84ad1e3db647
 etag: W/"81-5AbXQ5zLbZRkNl2kk3YpGKk2vkw"
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-{"status":404,"error":{"message":"Not found","code":"NotFound","details":{"path":"","messages":[]}},"resource":{"type":"charge"},"error_summary":{"message":"Not found","code":"not_found","details":{"messages":[]}}}
+{
+  "status": 404,
+  "error": {
+    "message": "Not found",
+    "code": "NotFound",
+    "details": {
+      "path": "",
+      "messages": []
+    }
+  },
+  "resource": {
+    "type": "charge"
+  },
+  "error_summary": {
+    "message": "Not found",
+    "code": "not_found",
+    "details": {
+      "messages": []
+    }
+  }
+}
