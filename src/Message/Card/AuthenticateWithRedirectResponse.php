@@ -8,6 +8,8 @@ use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 class AuthenticateWithRedirectResponse extends AuthenticateResponse
 {
+    protected string $threeDsUrl;
+
     /**
      * @param mixed $value
      * @return $this
@@ -24,6 +26,24 @@ class AuthenticateWithRedirectResponse extends AuthenticateResponse
     public function getSdkJsUrl()
     {
         return $this->getData()['sdkJsUrl'] ?? null;
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function set3dsUrl($value)
+    {
+        $this->threeDsUrl = $value;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function get3dsUrl()
+    {
+        return $this->threeDsUrl;
     }
 
     /**
@@ -65,7 +85,11 @@ class AuthenticateWithRedirectResponse extends AuthenticateResponse
      */
     public function getRedirectUrl()
     {
-        return $this->getReturnUrl();
+        return $this->get3dsUrl() . '?' . http_build_query([
+            'sdkJsUrl' => $this->getSdkJsUrl(),
+            'authenticationToken' => $this->getAuthenticationToken(),
+            'redirectUrl' => $this->getReturnUrl(),
+        ]);
     }
 
     /**
@@ -89,6 +113,7 @@ class AuthenticateWithRedirectResponse extends AuthenticateResponse
     public function getRedirectResponse()
     {
         // $this->validateRedirect();
-        return $this->isSuccessful() ? new HttpResponse($this->getRedirectHtml()) : new HttpRedirectResponse($this->getRedirectUrl());
+        return new HttpRedirectResponse($this->getRedirectUrl());
+        // return $this->isSuccessful() ? new HttpResponse($this->getRedirectHtml()) : new HttpRedirectResponse($this->getRedirectUrl());
     }
 }

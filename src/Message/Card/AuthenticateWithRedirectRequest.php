@@ -35,7 +35,8 @@ class AuthenticateWithRedirectRequest extends AuthenticateRequest
         /** @var \Omnipay\Powerboard\Message\Card\AuthenticateWithRedirectResponse $response */
         $response = parent::sendData($data);
         $response->setSdkJsUrl($this->getSdkJsUrl())
-                 ->setReturnUrl($this->getReturnUrl());
+                 ->setReturnUrl($this->getReturnUrl())
+                 ->set3dsUrl($this->get3dsUrl());
         return $response;
     }
 }
