@@ -72,6 +72,23 @@ trait GatewayParameters
      * @param mixed $value
      * @return $this
      */
+    public function set3dsUrl($value)
+    {
+        return $this->setParameter('3dsUrl', $value);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function get3dsUrl()
+    {
+        return $this->getParameter('3dsUrl');
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
     public function setApiKey($value)
     {
         return $this->setParameter('apiKey', $value);

@@ -22,6 +22,7 @@ abstract class AbstractGateway extends AbstractGatewayBase
             'customisationTemplateId' => null,
             'configurationTemplateId' => null,
             'version' => null,
+            '3dsUrl' => null,
         ];
     }
 }
