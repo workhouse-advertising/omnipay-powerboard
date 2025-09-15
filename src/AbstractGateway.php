@@ -21,7 +21,7 @@ abstract class AbstractGateway extends AbstractGatewayBase
             'testMode' => false,
             'customisationTemplateId' => null,
             'configurationTemplateId' => null,
-            'version' => null,
+            'version' => 1,
         ];
     }
 }
