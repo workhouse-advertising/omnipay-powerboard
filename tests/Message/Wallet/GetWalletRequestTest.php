@@ -1,14 +1,14 @@
 <?php
 
-namespace Omnipay\Powerboard\Test\Message\Card;
+namespace Omnipay\Powerboard\Test\Message\Wallet;
 
-use Omnipay\Powerboard\Message\Card\CreateSessionRequest;
+use Omnipay\Powerboard\Message\Wallet\GetWalletRequest as Request;
 use Omnipay\Powerboard\Test\Message\AbstractMessageTestCase;
 
-class CreateSessionRequestTest extends AbstractMessageTestCase
+class GetWalletRequestTest extends AbstractMessageTestCase
 {
     /**
-     * @var \Omnipay\Powerboard\Message\Card\CreateSessionRequest
+     * @var Request
      */
     protected $request;
 
@@ -19,7 +19,9 @@ class CreateSessionRequestTest extends AbstractMessageTestCase
     {
         $client = $this->getHttpClient();
         $request = $this->getHttpRequest();
-        $this->request = new CreateSessionRequest($client, $request);
+        $this->request = new Request($client, $request);
+
+        $this->request->setChargeId('68b7e84a22423a77c15927c2');
     }
 
     /**
@@ -27,11 +29,7 @@ class CreateSessionRequestTest extends AbstractMessageTestCase
      */
     public function testGetData()
     {
-        $this->request->setToken('TOKEN1234');
-
         $expected = [];
-        $expected['token'] = 'TOKEN1234';
-        $expected['vault_type'] = 'session';
 
         $this->assertEquals($expected, $this->request->getData());
     }
@@ -41,8 +39,7 @@ class CreateSessionRequestTest extends AbstractMessageTestCase
      */
     public function testSendSuccess()
     {
-        $this->setMockHttpResponse('CreateSessionSuccess.txt');
-        $this->request->setToken('TOKEN1234');
+        $this->setMockHttpResponse('GetWalletSuccess.txt');
 
         $response = $this->request->send();
         $this->assertFalse($response->isPending());
@@ -55,13 +52,12 @@ class CreateSessionRequestTest extends AbstractMessageTestCase
      */
     public function testSendFailure()
     {
-        $this->setMockHttpResponse('CreateSessionFailure.txt');
-        $this->request->setToken('TOKEN1234');
+        $this->setMockHttpResponse('GetWalletFailure.txt');
 
         $response = $this->request->send();
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
-        $this->assertSame('An unspecified error occurred so the purchase could not be completed', $response->getMessage());
+        $this->assertSame('A resource could not be found so the purchase could not be completed', $response->getMessage());
     }
 }

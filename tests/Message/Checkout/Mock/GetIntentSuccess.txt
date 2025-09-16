@@ -12,4 +12,34 @@ x-correlation-id: 0cc5d1ef-5560-4264-81d6-41f2c406dfca
 etag: W/"23d-GUgd3mwpevDomD7JlP0YqRffFSU"
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-{"status":200,"error":null,"resource":{"type":"checkout","data":{"_id":"68afff303c5318b035559bf5","version":1,"status":"active","reason":null,"amount":1000,"currency":"AUD","reference":"2977ea1a-227c-4371-a94b-b4166953cf21","journey":[{"sense":"info","title":"CheckoutFlow created","message":"Checkout process created ....","thread":"main","context":null,"paymentFlow_id":null,"_id":"68afff307ae73295d6fd53cc","created_at":"2025-08-28T07:03:12.268Z","updatedAt":"2025-08-28T07:03:12.268Z"}],"created_at":"2025-08-28T07:03:12.015Z","updated_at":"2025-08-28T07:03:12.268Z"}}}
+{
+  "status": 200,
+  "error": null,
+  "resource": {
+    "type": "checkout",
+    "data": {
+      "_id": "68afff303c5318b035559bf5",
+      "version": 1,
+      "status": "active",
+      "reason": null,
+      "amount": 1000,
+      "currency": "AUD",
+      "reference": "2977ea1a-227c-4371-a94b-b4166953cf21",
+      "journey": [
+        {
+          "sense": "info",
+          "title": "CheckoutFlow created",
+          "message": "Checkout process created ....",
+          "thread": "main",
+          "context": null,
+          "paymentFlow_id": null,
+          "_id": "68afff307ae73295d6fd53cc",
+          "created_at": "2025-08-28T07:03:12.268Z",
+          "updatedAt": "2025-08-28T07:03:12.268Z"
+        }
+      ],
+      "created_at": "2025-08-28T07:03:12.015Z",
+      "updated_at": "2025-08-28T07:03:12.268Z"
+    }
+  }
+}

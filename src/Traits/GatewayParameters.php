@@ -33,7 +33,6 @@ trait GatewayParameters
      */
     public function getSdkJsUrl()
     {
-        // TODO: Update this to use a specific versioned version of the JS.
         return sprintf('%s/sdk/latest/widget.umd.js', $this->getBaseAssetUrl());
     }
 
@@ -127,5 +126,22 @@ trait GatewayParameters
     public function setConfigurationTemplateId($value)
     {
         return $this->setParameter('configurationTemplateId', $value);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVersion()
+    {
+        return $this->getParameter('version');
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     */
+    public function setVersion($value)
+    {
+        return $this->setParameter('version', $value);
     }
 }

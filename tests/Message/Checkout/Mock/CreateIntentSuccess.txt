@@ -12,4 +12,24 @@ x-correlation-id: b18919be-82da-464b-b799-ac5618c303c0
 etag: W/"3a4-lhxvKUbHk2gOmLBC5xzRB8LK+nQ"
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-{"status":201,"error":null,"resource":{"type":"checkout","data":{"_id":"68aff5e33c5318b035559bda","version":1,"status":"active","reason":null,"amount":1000,"currency":"AUD","reference":"1c0aef44-b146-4949-813e-65bd5dba3aa1","journey":[],"created_at":"2025-08-28T06:23:31.303Z","updated_at":"2025-08-28T06:23:31.303Z","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWZmNWUzMmNkYzIxZThkZGJiZjZiNSIsIm1ldGEiOiJleUpsYm5ZaU9pSndjbVZ3Y205a2RXTjBhVzl1WDJOaVlTSXNJbVZ1ZGw5b2IzTjBJam9pWVhCd0xuQnlaWEJ5YjJSMVkzUnBiMjR1Y0c5M1pYSmliMkZ5WkM1amIyMXRZbUZ1YXk1amIyMHVZWFVpTENKcGJuUmxiblJmYVdRaU9pSTJPR0ZtWmpWbE16TmpOVE14T0dJd016VTFOVGxpWkdFaUxDSjJaWEp6YVc5dUlqb3hMQ0psYm5aZllXeHBZWE1pT2lKamIyMXRZbUZ1YXk1amIyMHVZWFVpZlE9PSIsImlhdCI6MTc1NjM2MjIxMSwiZXhwIjoxNzU2MzYzMTcxfQ.t1O3GTQLK_X1jlXXc299RgLp4NU-liBr6ASvPscGcws","recommended_sdk_version_url":"https://widget.preproduction.powerboard.commbank.com.au/sdk/v1.127.0/widget.umd.min.js"}}}
+{
+  "status": 201,
+  "error": null,
+  "resource": {
+    "type": "checkout",
+    "data": {
+      "_id": "68aff5e33c5318b035559bda",
+      "version": 1,
+      "status": "active",
+      "reason": null,
+      "amount": 1000,
+      "currency": "AUD",
+      "reference": "1c0aef44-b146-4949-813e-65bd5dba3aa1",
+      "journey": [],
+      "created_at": "2025-08-28T06:23:31.303Z",
+      "updated_at": "2025-08-28T06:23:31.303Z",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWZmNWUzMmNkYzIxZThkZGJiZjZiNSIsIm1ldGEiOiJleUpsYm5ZaU9pSndjbVZ3Y205a2RXTjBhVzl1WDJOaVlTSXNJbVZ1ZGw5b2IzTjBJam9pWVhCd0xuQnlaWEJ5YjJSMVkzUnBiMjR1Y0c5M1pYSmliMkZ5WkM1amIyMXRZbUZ1YXk1amIyMHVZWFVpTENKcGJuUmxiblJmYVdRaU9pSTJPR0ZtWmpWbE16TmpOVE14T0dJd016VTFOVGxpWkdFaUxDSjJaWEp6YVc5dUlqb3hMQ0psYm5aZllXeHBZWE1pT2lKamIyMXRZbUZ1YXk1amIyMHVZWFVpZlE9PSIsImlhdCI6MTc1NjM2MjIxMSwiZXhwIjoxNzU2MzYzMTcxfQ.t1O3GTQLK_X1jlXXc299RgLp4NU-liBr6ASvPscGcws",
+      "recommended_sdk_version_url": "https://widget.preproduction.powerboard.commbank.com.au/sdk/v1.127.0/widget.umd.min.js"
+    }
+  }
+}
