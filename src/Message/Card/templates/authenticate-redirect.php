@@ -4,9 +4,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>3DS Secure</title>
     <script type="text/javascript" src="<?php echo $sdkJsUrl ?? null ?>"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        #ThreeDSCanvas {
+            height: 100%;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <div id="ThreeDSCanvas" style="height: 100%; height: 100vh;"></div>
+    <div id="ThreeDSCanvas"></div>
     <script>
         <?php
             // TODO: Improve this JS and error handling/messaging.
