@@ -47,4 +47,12 @@ class PurchaseResponse extends AbstractResponse
     {
         return $this->getCharge()['status'] ?? null;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTransactionReference()
+    {
+        return $this->getCharge()['_id'] ?? null;
+    }
 }

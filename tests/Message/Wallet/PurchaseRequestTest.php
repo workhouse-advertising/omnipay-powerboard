@@ -47,6 +47,7 @@ class PurchaseRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
+        $this->assertEquals('68b00b9d22423a77c1576739', $response->getTransactionReference());
     }
 
     /**

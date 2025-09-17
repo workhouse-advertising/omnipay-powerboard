@@ -78,6 +78,7 @@ class CreateIntentRequestTest extends AbstractMessageTestCase
         $this->assertFalse($response->isPending());
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
+        $this->assertEquals('68aff5e33c5318b035559bda', $response->getTransactionReference());
     }
 
     /**

@@ -53,4 +53,12 @@ class CreateWalletResponse extends AbstractResponse
     {
         return $this->getResource()['token'] ?? null;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTransactionReference()
+    {
+        return $this->getCharge()['_id'] ?? null;
+    }
 }

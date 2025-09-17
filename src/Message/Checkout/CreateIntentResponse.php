@@ -29,4 +29,12 @@ class CreateIntentResponse extends AbstractResponse
     {
         return $this->getIntent()['_id'] ?? null;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTransactionReference()
+    {
+        return $this->getIntentId();
+    }
 }
