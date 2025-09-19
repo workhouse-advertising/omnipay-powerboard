@@ -37,13 +37,17 @@ class CreateWalletRequest extends AbstractWalletRequest
                     'address_postcode' => $this->getCard()->getBillingPostcode(),
                 ],
             ],
+            'meta' => (array) $this->getMeta(),
         ];
 
-        // Remove any empty values from the customer details and make remove description if it's not valid.
+        // Remove any empty values from the customer details and remove description and meta if invalid.
         $data['customer']['payment_source'] = array_filter($data['customer']['payment_source']);
         $data['customer'] = array_filter($data['customer']);
         if (!$data['description']) {
             unset($data['description']);
+        }
+        if (!$data['meta']) {
+            unset($data['meta']);
         }
 
         return $data;
