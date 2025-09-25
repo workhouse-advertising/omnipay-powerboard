@@ -50,6 +50,14 @@ class AuthenticateResponse extends AbstractResponse
     /**
      * @return mixed
      */
+    public function getAuthenticationRecommendation()
+    {
+        return $this->getAuthenticationResponse()['gateway_recommendation'] ?? null;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getAuthenticationResult()
     {
         return $this->getAuthenticationResponse()['gateway_result'] ?? null;
@@ -84,7 +92,6 @@ class AuthenticateResponse extends AbstractResponse
      */
     public function shouldProceed()
     {
-        // TODO: Is this useful or required any more? Or only relevant for the MPGS portal?
-        return (bool) $this->isSuccessful();
+        return $this->getAuthenticationRecommendation() === 'PROCEED';
     }
 }
