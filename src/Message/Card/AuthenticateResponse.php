@@ -16,6 +16,14 @@ class AuthenticateResponse extends AbstractResponse
     }
 
     /**
+     * @return array
+     */
+    public function getAuthenticationResponse()
+    {
+        return (array) ($this->getCharge()['_3ds'] ?? []);
+    }
+
+    /**
      * @return mixed
      */
     public function getCharge()
@@ -36,7 +44,23 @@ class AuthenticateResponse extends AbstractResponse
      */
     public function getAuthenticationToken()
     {
-        return $this->getCharge()['_3ds']['token'] ?? null;
+        return $this->getAuthenticationResponse()['token'] ?? null;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthenticationResult()
+    {
+        return $this->getAuthenticationResponse()['gateway_result'] ?? null;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthenticationStatus()
+    {
+        return $this->getAuthenticationResponse()['gateway_status'] ?? null;
     }
 
     /**
@@ -45,6 +69,14 @@ class AuthenticateResponse extends AbstractResponse
     public function isAuthenticationNotAvailable()
     {
         return $this->getChargeStatus() == 'authentication_not_supported';
+    }
+
+    /**
+     * @return bool
+     */
+    public function authenticationFailed()
+    {
+        return $this->getAuthenticationResult() === 'FAILURE';
     }
 
     /**
