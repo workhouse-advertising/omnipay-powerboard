@@ -90,6 +90,14 @@ class AuthenticateResponse extends AbstractResponse
     /**
      * @return bool
      */
+    public function authenticationSuccessful()
+    {
+        return $this->getAuthenticationResult() === 'SUCCESS';
+    }
+
+    /**
+     * @return bool
+     */
     public function shouldProceed()
     {
         return $this->getAuthenticationRecommendation() === 'PROCEED';
