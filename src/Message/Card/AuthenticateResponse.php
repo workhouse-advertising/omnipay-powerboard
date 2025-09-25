@@ -100,6 +100,7 @@ class AuthenticateResponse extends AbstractResponse
      */
     public function shouldProceed()
     {
-        return $this->getAuthenticationRecommendation() === 'PROCEED';
+        // NOTE: Powerboard doesn't always send us a recommendation so we have to default to whether or not this is successful.
+        return ($this->getAuthenticationRecommendation() === 'PROCEED' || (!$this->getAuthenticationRecommendation() && $this->isSuccessful()));
     }
 }
