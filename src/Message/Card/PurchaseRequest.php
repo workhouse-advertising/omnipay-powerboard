@@ -49,7 +49,12 @@ class PurchaseRequest extends AbstractCardRequest
 
         // 3DS handling.
         if ($this->get3dsRequired()) {
-            $this->validate('charge3dsId');
+            try {
+                $this->validate('charge3dsId');
+            } catch (InvalidRequestException $e) {
+                // Simply throwing an Exception so that the error message is somewhat useful.
+                throw new InvalidRequestException('3DS authentication either failed or the parameter was missing from the purchase request');
+            }
         }
 
         if ($this->getCharge3dsId()) {
