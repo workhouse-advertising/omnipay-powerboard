@@ -24,4 +24,17 @@ abstract class AbstractGateway extends AbstractGatewayBase
             'version' => 1,
         ];
     }
+
+    /**
+     * Get a charge.
+     *
+     * @param array $options
+     * @return \Omnipay\Powerboard\Message\GetChargeRequest
+     */
+    public function getCharge(array $options = [])
+    {
+        $request = $this->createRequest(\Omnipay\Powerboard\Message\GetChargeRequest::class, $options);
+        /** @var \Omnipay\Powerboard\Message\GetChargeRequest $request */
+        return $request;
+    }
 }
