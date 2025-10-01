@@ -45,7 +45,7 @@
                 handleRedirect(data);
             });
         } catch (error) {
-            alert(error);
+            // alert(error); // TODO: Consider an alternative to alerting.
             console.error(error);
             handleRedirect();
         }
